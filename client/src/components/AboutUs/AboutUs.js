@@ -6,13 +6,15 @@ import image from './images/2girls.png';
 import worker1 from './images/image 46.png';
 import worker2 from './images/image 47.png';
 import worker3 from './images/image 51.png';
-import linkedin from './images/Icon-Linkedin.svg'
-import instagram from './images/Instagram.svg'
-import twitter from './images/twitter.svg'
-import point from './images/point.svg'
-import frame701 from './images/Frame 701.svg'
-import frame702 from './images/Frame 702.svg'
-import frame703 from './images/Frame 703.svg'
+import linkedin from './images/Icon-Linkedin.svg';
+import instagram from './images/Instagram.svg';
+import twitter from './images/twitter.svg';
+import point from './images/point.svg';
+import frame701 from './images/Frame 701.svg';
+import frame702 from './images/Frame 702.svg';
+import frame703 from './images/Frame 703.svg';
+import circle from './images/Circle.svg';
+import white from './images/white.svg';
 
 
 
@@ -84,7 +86,7 @@ const About = () => {
           </div>
         </div>
         <div className="services-parent">
-          <img className="services-icon" alt="" src="/services3.svg" />
+          <img className="services-icon" alt="" src={circle} />
           <div className="free-and-fast-delivery-parent">
             <div className="free-and-fast">MONEY BACK GUARANTEE</div>
             <div className="friendly-247-customer">
@@ -96,7 +98,7 @@ const About = () => {
       <div className="frame-group">
         <div className="instance-wrapper">
           <div className="services-parent1">
-            <img className="services-icon" alt="" src="/services4.svg" />
+            <img className="services-icon" alt="" src={circle} />
             <div className="free-and-fast-delivery-group">
               <b className="free-and-fast1">{`10.5k `}</b>
               <div className="free-delivery-for1">Sallers active our site</div>
@@ -105,16 +107,16 @@ const About = () => {
         </div>
         <div className="instance-container">
           <div className="services-parent2">
-            <img className="services-icon" alt="" src="/services5.svg" />
+            <img className="services-icon" alt="" src={white} />
             <div className="free-and-fast-delivery-parent">
               <b className="free-and-fast1">33k</b>
-              <div className="founder-chairman">Mopnthly Produduct Sale</div>
+              <div className="founder-chairman">Monthly Produduct Sale</div>
             </div>
           </div>
         </div>
         <div className="instance-wrapper">
           <div className="services-parent3">
-            <img className="services-icon" alt="" src="/services6.svg" />
+            <img className="services-icon" alt="" src={circle} />
             <div className="free-and-fast-delivery-group">
               <b className="free-and-fast1">45.5k</b>
               <div className="founder-chairman">
@@ -125,7 +127,7 @@ const About = () => {
         </div>
         <div className="instance-wrapper">
           <div className="services-parent4">
-            <img className="services-icon" alt="" src="/services7.svg" />
+            <img className="services-icon" alt="" src={circle} />
             <div className="free-and-fast-delivery-group">
               <b className="free-and-fast1">25k</b>
               <div className="founder-chairman">

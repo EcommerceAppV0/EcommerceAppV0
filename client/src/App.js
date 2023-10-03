@@ -11,8 +11,9 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-      {/* <SignUp /> */}
-      <About />
+      <SignUp />
+      
+
 
 
       {/* the footer will be the last compnetnts for all  */}

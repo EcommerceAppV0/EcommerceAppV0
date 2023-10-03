@@ -397,10 +397,12 @@ body {
     justify-content: flex-start;
     gap: var(--gap-xs);
   }
-
-
-
-
+  .frame-parent8,
+  .send-mail {
+    display: flex;
+    justify-content: flex-start;
+  }
+ 
 
 
 

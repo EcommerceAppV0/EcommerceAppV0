@@ -16,7 +16,7 @@ function App() {
       {/* <SignUp />
       <Login /> */}
       <About />
-      <Error />
+      {/* <Error /> */}
 
 
 

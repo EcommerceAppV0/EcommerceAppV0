@@ -1,3 +1,5 @@
+//matmesouch bsh nkamlha : hakim
+
 import { useCallback } from "react";
 import "./style.css";
 import image from './images/2girls.png';
@@ -5,6 +7,15 @@ import worker1 from './images/image 46.png';
 import worker2 from './images/image 47.png';
 import worker3 from './images/image 51.png';
 import linkedin from './images/Icon-Linkedin.svg'
+import instagram from './images/Instagram.svg'
+import twitter from './images/twitter.svg'
+import point from './images/point.svg'
+import frame701 from './images/Frame 701.svg'
+import frame702 from './images/Frame 702.svg'
+import frame703 from './images/Frame 703.svg'
+
+
+
 
 
 const About = () => {
@@ -46,7 +57,7 @@ const About = () => {
       </div>
       <div className="full-services">
         <div className="services-parent">
-          <img className="services-icon" alt="" src="/services.svg" />
+          <img className="services-icon" alt="" src={frame701} />
           <div className="free-and-fast-delivery-parent">
             <div className="free-and-fast">FREE AND FAST DELIVERY</div>
             <div className="free-delivery-for">
@@ -55,7 +66,7 @@ const About = () => {
           </div>
         </div>
         <div className="services-group">
-          <img className="services-icon" alt="" src="/services1.svg" />
+          <img className="services-icon" alt="" src={frame702} />
           <div className="free-and-fast-delivery-parent">
             <div className="free-and-fast">24/7 CUSTOMER SERVICE</div>
             <div className="friendly-247-customer">
@@ -64,7 +75,7 @@ const About = () => {
           </div>
         </div>
         <div className="services-container">
-          <img className="services-icon" alt="" src="/services2.svg" />
+          <img className="services-icon" alt="" src={frame703} />
           <div className="free-and-fast-delivery-parent">
             <div className="free-and-fast">MONEY BACK GUARANTEE</div>
             <div className="friendly-247-customer">
@@ -135,8 +146,8 @@ const About = () => {
               <div className="founder-chairman">{`Founder & Chairman`}</div>
             </div>
             <div className="icon-twitter-parent">
-              <img className="dropdown-icon" alt="" src="/icontwitter.svg" />
-              <img className="dropdown-icon" alt="" src="/iconinstagram.svg" />
+              <img className="dropdown-icon" alt="" src={twitter} />
+              <img className="dropdown-icon" alt="" src={instagram} />
               <img className="dropdown-icon" alt="" src={linkedin} />
             </div>
           </div>
@@ -151,8 +162,8 @@ const About = () => {
               <div className="founder-chairman">Managing Director</div>
             </div>
             <div className="icon-twitter-parent">
-              <img className="dropdown-icon" alt="" src="/icontwitter1.svg" />
-              <img className="dropdown-icon" alt="" src="/iconinstagram1.svg" />
+              <img className="dropdown-icon" alt="" src={twitter} />
+              <img className="dropdown-icon" alt="" src={instagram} />
               <img className="dropdown-icon" alt="" src={linkedin} />
             </div>
           </div>
@@ -167,8 +178,8 @@ const About = () => {
               <div className="founder-chairman">Product Designer</div>
             </div>
             <div className="icon-twitter-parent">
-              <img className="dropdown-icon" alt="" src="/icontwitter2.svg" />
-              <img className="dropdown-icon" alt="" src="/iconinstagram2.svg" />
+              <img className="dropdown-icon" alt="" src={twitter} />
+              <img className="dropdown-icon" alt="" src={instagram} />
               <img className="dropdown-icon" alt="" src={linkedin} />
             </div>
           </div>
@@ -177,7 +188,7 @@ const About = () => {
       <div className="ellipse-parent">
         <div className="frame-child" />
         <div className="frame-child" />
-        <img className="frame-inner" alt="" src="/group-1000005940.svg" />
+        <img className="frame-inner" alt="" src={point} />
         <div className="frame-child" />
         <div className="frame-child" />
       </div>

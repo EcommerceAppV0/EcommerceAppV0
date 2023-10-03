@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style.css"
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
-
+import { logout, setUser, registerUser } from "../../slicers/userSlicer.js"
+import { useSelector, useDispatch } from 'react-redux'
 const SignUp = () => {
+    // console.log(user);
+    const user = useSelector((state) => state.value.user)
+    const [update, setUpdate] = useState(true)
+    useEffect(() => {
+        console.log(user);
+    }, [update])
+    const dispatch = useDispatch()
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        password: "",
+        type: "client"
+    })
+    console.log(form);
+    const handleFom = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
+
     return (
         <div className='signup-container'>
             <div className='frame1'>
@@ -15,12 +37,23 @@ const SignUp = () => {
                 </div>
                 <div className='form-container'>
                     <div className='sub-form-container'>
-                        <input className='name' placeholder='Name' />
-                        <input className='mail' placeholder='Email or Phone Number' />
-                        <input className='password' placeholder='Password' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='name'
+                            className='name' placeholder='Name' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='email'
+                            className='mail' placeholder='Email or Phone Number' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='password'
+                            className='password' placeholder='Password' />
                     </div>
                     <div className='sub-form-container2'>
-                        <button className='btn-add'>Create Account</button>
+                        <button className='btn-add'
+                            onClick={() => { dispatch(registerUser(form)); setUpdate(!true); }}
+                        >Create Account</button>
                         <div className='wrap' >
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2574_2219)">
@@ -47,7 +80,6 @@ const SignUp = () => {
                                     </g>
                                 </svg>
                             </div>
-
                         </div>
                     </div>
                 </div>

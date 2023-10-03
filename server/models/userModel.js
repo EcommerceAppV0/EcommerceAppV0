@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const Client = sequelize.define('Client', {
+    const User = sequelize.define('User', {
         email: {
             type: DataTypes.STRING,
             unique: true,
@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         type: {
             type: DataTypes.ENUM,
-            values: ['admin', 'client', 'seller']
+            values: ['admin', 'Client', 'seller']
         }
 
     })
-    return Client;
+    return User;
 }

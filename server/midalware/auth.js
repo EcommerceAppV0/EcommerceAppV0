@@ -7,6 +7,6 @@ module.exports = async (req, res, next) => {
         req.user = user
         next();
     } catch (error) {
-        res.status(401).json({ error: "invalid Request" });
+        res.status(401).json({ error: "You are Unauthorized" });
     }
 }

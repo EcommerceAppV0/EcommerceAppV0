@@ -13,12 +13,12 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-      {/* <SignUp />
-      <Login /> */}
-      {/* <Error /> */}
+      <SignUp />
+      <Login />
+      <Error />
 
 
-
+      {/* Contact Done */}
 
       <Contact />
 

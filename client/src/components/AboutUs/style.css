@@ -57,7 +57,10 @@
 }
 
 
-
+  .about{
+    height: 320vh;
+    position: relative;
+  }
   .about-child {
     position: absolute;
     top: 8.88rem;

@@ -37,16 +37,6 @@ export const Footer = () => {
             </div>
             <p className="text-wrapper-3">Get 10% off your first order</p>
           </div>
-          <div className="send-mail">
-            <div className="text-wrapper">Enter your email</div>
-            <div className="icon-send-screen">
-              <img
-                className="vector"
-                alt="Vector"
-                src={vector} 
-              />
-            </div>
-          </div>
         </div>
         <div className="frame-5">
           <div className="text-wrapper-4">Support</div>

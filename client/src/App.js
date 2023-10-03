@@ -17,13 +17,13 @@ function App() {
       {/* heree it will be the routers */}
 
       <SignUp />
-      <Login />
+      <Login />   
       <Error />
 
 
       {/* <SignUp />
       <Login /> */}
-      <About />
+      {/* <About /> */}
       {/* <Error /> */}
 
 

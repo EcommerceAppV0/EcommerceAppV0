@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Navabr from './components/Nabar/Navabr';
+import TopHeader from './components/TopHeader/TopHeader';
+import SignUp from './components/SignUp/SignUp';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      {/* This to compnents will be for all the app  */}
+      <TopHeader />
+      <Navabr />
+
+      {/* heree it will be the routers */}
+      <SignUp />
+
+
+
+      {/* the footer will be the last compnetnts for all  */}
     </div>
   );
 }

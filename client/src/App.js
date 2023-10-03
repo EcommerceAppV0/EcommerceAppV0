@@ -11,7 +11,8 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-      <SignUp />
+      {/* <SignUp /> */}
+      <About/>
       
 
 

@@ -1,193 +1,265 @@
-import React from "react";
-import { FullServices } from "./FullServices";
-import { HeaderWrapper } from "./HeaderWrapper";
-import { IconCustomerService } from "./IconCustomerService";
-import { IconInstagram } from "./IconInstagram";
-import { IconLinkedin } from "./IconLinkedin";
-import { IconMoneybag } from "./IconMoneybag";
-import { IconSale } from "./IconSale";
-import { IconShop } from "./IconShop";
-import { IconShoppingBag } from "./IconShoppingBag";
-import { IconTwitter } from "./IconTwitter";
-import { Roadmap } from "./subcomps/Roadmap";
-import { ServicesCustomer } from "./ServicesCustomer";
-import { ServicesFast } from "./ServicesFast";
-import { ServicesMoneyBack } from "./ServicesMoneyBack";
-import { TopHeader } from "./subcomps/TopHeader";
-import "./style.css";
+import { React ,useCallback } from "react";
 
-export const About = () => {
+
+const About = () => {
+  const onHeaderContainer1Click = useCallback(() => {
+  }, []);
+
   return (
-    <div className="about">
-      <div className="div-2">
-        <TopHeader className="top-header-instance" />
-        <HeaderWrapper
-          className="header-2"
-          headerHeader="home"
-          headerHeader1="header-about-hover"
-          headerHeaderHeaderHomeClassName="header-3"
-          headerUnderLineUnderLineClassName="header-4"
-          withBuyCart="off"
-          withBuyCartOnClassName="header-5"
+    <div>
+    <div className="relative bg-bg w-full h-[2905px] overflow-hidden text-left text-sm text-text2 font-title-12px-medium">
+        <div className="relative leading-[21px] hidden">Nothing</div>
+        <img
+          className="relative w-[13.19px] h-0 hidden"
+          alt=""
+          src="/line-15.svg"
         />
-        <div className="line-wrapper">
-          <img className="img" alt="Line" src="line-3.svg" />
-        </div>
-        <Roadmap
-          className="roadmap-instance"
-          hasDiv={false}
-          hasDiv1={false}
-          hasImg={false}
-          hasLine={false}
-          hasLine1={false}
-          line="line-13-2.svg"
-          text="Home"
-          text1="About"
-          visible={false}
+        <div className="relative leading-[21px] hidden">Nothing</div>
+        <img
+          className="relative w-[13.19px] h-0 hidden"
+          alt=""
+          src="/line-16.svg"
         />
-        <div className="frame-12">
-          <div className="text-wrapper-7">Our Story</div>
-          <div className="frame-13">
-            <p className="text-wrapper-8">
-              Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in
-              Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has
-              10,500 sallers and 300 brands and serves 3 millioons customers across the region.
-            </p>
-            <p className="exclusive-has-more">
-              Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse
-              assotment in categories ranging&nbsp;&nbsp;from consumer.
-            </p>
-          </div>
+        <div className="relative leading-[21px] hidden">Nothing</div>
+      </div>
+      <div className="absolute top-[422px] left-[135px] flex flex-col items-start justify-start gap-[40px] text-justify text-35xl font-heading-32px-medium">
+        <div className="relative tracking-[0.06em] leading-[64px] font-semibold">
+          Our Story
         </div>
-        <div className="side-image">
-          <img
-            className="portrait-two-african"
-            alt="Portrait two african"
-            src="portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone-1.png"
-          />
-        </div>
-        <FullServices
-          className="full-services-instance"
-          servicesCustomerIcon={<IconCustomerService className="icon-instance-node-3" color="white" />}
-          servicesCustomerServicesServicesDeliveryClassName="full-services-3"
-          servicesFastServicesServicesDeliveryClassName="full-services-2"
-          servicesMoneyBackServicesServicesDeliveryClassName="full-services-4"
-          visible={false}
-        />
-        <div className="frame-14">
-          <div className="frame-wrapper">
-            <ServicesFast
-              className="services-fast-delivery"
-              divClassName="frame-16"
-              divClassNameOverride="frame-17"
-              frameClassName="frame-15"
-              icon={<IconShop className="icon-instance-node-3" />}
-              servicesServicesDeliveryClassName="services-fast-instance"
-              text="10.5k"
-              text1="Sallers active our site"
-            />
+        <div className="flex flex-col items-start justify-start gap-[24px] text-left text-base font-title-12px-medium">
+          <div className="relative leading-[26px] inline-block w-[525px]">{`Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region. `}</div>
+          <div className="relative leading-[26px] inline-block w-[505px]">
+            Exclusive has more than 1 Million products to offer, growing at a
+            very fast. Exclusive offers a diverse assotment in categories
+            ranging from consumer.
           </div>
-          <div className="services-money-back-wrapper">
-            <ServicesMoneyBack
-              className="frame-21"
-              divClassName="frame-19"
-              divClassNameOverride="frame-20"
-              icon={<IconSale className="icon-instance-node-3" />}
-              servicesOverlapGroupClassName="frame-18"
-              servicesServicesDeliveryClassName="frame-22"
-              text="33k"
-              text1="Mopnthly Produduct Sale"
-            />
-          </div>
-          <div className="frame-wrapper">
-            <ServicesCustomer
-              className="services-customer-service"
-              divClassName="frame-16"
-              divClassNameOverride="frame-17"
-              frameClassName="frame-15"
-              icon={<IconShoppingBag className="icon-instance-node-3" color="white" />}
-              servicesServicesDeliveryClassName="services-customer-instance"
-              text="45.5k"
-              text1="Customer active in our site"
-            />
-          </div>
-          <div className="frame-wrapper">
-            <ServicesMoneyBack
-              className="frame-23"
-              divClassName="frame-16"
-              divClassNameOverride="frame-17"
-              frameClassName="frame-15"
-              icon={<IconMoneybag className="icon-instance-node-3" />}
-              servicesServicesDeliveryClassName="frame-24"
-              text="25k"
-              text1="Anual gross sale in our site"
-            />
-          </div>
-        </div>
-        <div className="frame-25">
-          <div className="frame-26">
-            <div className="image-wrapper">
-              <img className="image" alt="Image" src="image-46.png" />
-            </div>
-            <div className="frame-27">
-              <div className="frame-28">
-                <div className="text-wrapper-9">Tom Cruise</div>
-                <div className="text-wrapper-10">Founder &amp; Chairman</div>
-              </div>
-              <div className="frame-29">
-                <IconTwitter className="icon-instance-node-4" color="black" stroke="white" />
-                <IconInstagram className="icon-instance-node-4" color="black" />
-                <IconLinkedin className="icon-instance-node-4" color="black" />
-              </div>
-            </div>
-          </div>
-          <div className="frame-26">
-            <div className="image-wrapper">
-              <img className="image-2" alt="Image" src="image-51.png" />
-            </div>
-            <div className="frame-27">
-              <div className="frame-28">
-                <div className="text-wrapper-9">Emma Watson</div>
-                <div className="text-wrapper-10">Managing Director</div>
-              </div>
-              <div className="frame-29">
-                <IconTwitter className="icon-instance-node-4" color="black" stroke="white" />
-                <IconInstagram className="icon-instance-node-4" color="black" />
-                <IconLinkedin className="icon-instance-node-4" color="black" />
-              </div>
-            </div>
-          </div>
-          <div className="frame-26">
-            <div className="image-wrapper">
-              <img className="image-3" alt="Image" src="image-47.png" />
-            </div>
-            <div className="frame-27">
-              <div className="frame-28">
-                <div className="text-wrapper-9">Will Smith</div>
-                <div className="text-wrapper-10">Product Designer</div>
-              </div>
-              <div className="frame-29">
-                <IconTwitter className="icon-instance-node-4" color="black" stroke="white" />
-                <IconInstagram className="icon-instance-node-4" color="black" />
-                <IconLinkedin className="icon-instance-node-4" color="black" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="frame-30">
-          <div className="ellipse-3" />
-          <div className="ellipse-3" />
-          <div className="group-2">
-            <div className="overlap-group-6">
-              <div className="ellipse-4" />
-              <div className="ellipse-5" />
-            </div>
-          </div>
-          <div className="ellipse-3" />
-          <div className="ellipse-3" />
         </div>
       </div>
-    </div>
+      <div className="absolute top-[285px] left-[734px] rounded-tl rounded-tr-none rounded-br-none rounded-bl bg-palevioletred w-[705px] h-[609px] overflow-hidden">
+        <img
+          className="absolute top-[0px] left-[0px] w-[837px] h-[609px] object-cover"
+          alt=""
+          src="/portraittwoafricanfemalesholdingshoppingbagswhilereactingsomethingtheirsmartphone-1@2x.png"
+        />
+      </div>
+      <div className="absolute top-[2164px] left-[248px] flex flex-row items-center justify-center gap-[88px] text-xl">
+        <div className="flex flex-col items-center justify-start gap-[24px]">
+          <img className="relative w-20 h-20" alt="" src="/services.svg" />
+          <div className="flex flex-col items-center justify-start gap-[8px]">
+            <div className="relative leading-[28px] font-semibold">
+              FREE AND FAST DELIVERY
+            </div>
+            <div className="relative text-sm leading-[21px] text-center">
+              Free delivery for all orders over $140
+            </div>
+          </div>
+        </div>
+        <div className="w-[262px] flex flex-col items-center justify-start gap-[24px]">
+          <img className="relative w-20 h-20" alt="" src="/services1.svg" />
+          <div className="flex flex-col items-center justify-start gap-[8px]">
+            <div className="relative leading-[28px] font-semibold">
+              24/7 CUSTOMER SERVICE
+            </div>
+            <div className="relative text-sm leading-[21px]">
+              Friendly 24/7 customer support
+            </div>
+          </div>
+        </div>
+        <div className="hidden flex-col items-center justify-start gap-[24px]">
+          <img className="relative w-20 h-20" alt="" src="/services2.svg" />
+          <div className="flex flex-col items-center justify-start gap-[8px]">
+            <div className="relative leading-[28px] font-semibold">
+              MONEY BACK GUARANTEE
+            </div>
+            <div className="relative text-sm leading-[21px]">
+              We reurn money within 30 days
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-start gap-[24px]">
+          <img className="relative w-20 h-20" alt="" src="/services3.svg" />
+          <div className="flex flex-col items-center justify-start gap-[8px]">
+            <div className="relative leading-[28px] font-semibold">
+              MONEY BACK GUARANTEE
+            </div>
+            <div className="relative text-sm leading-[21px]">
+              We reurn money within 30 days
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-[1034px] left-[135px] flex flex-row items-start justify-start gap-[30px] text-13xl font-heading-32px-medium">
+        <div className="relative rounded box-border w-[270px] h-[230px] overflow-hidden shrink-0 border-[1px] border-solid border-gray-200">
+          <div className="absolute top-[30px] left-[50px] flex flex-col items-center justify-start gap-[24px]">
+            <img className="relative w-20 h-20" alt="" src="/services4.svg" />
+            <div className="flex flex-col items-center justify-start gap-[12px]">
+              <b className="relative tracking-[0.04em] leading-[30px]">{`10.5k `}</b>
+              <div className="relative text-base leading-[24px] font-title-12px-medium text-center">
+                Sallers active our site
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded bg-secondary-2 shadow-[0px_2px_10px_2px_rgba(0,_0,_0,_0.2)] w-[270px] h-[230px] overflow-hidden shrink-0 text-bg">
+          <div className="absolute top-[32px] left-[35px] flex flex-col items-center justify-start gap-[24px]">
+            <img className="relative w-20 h-20" alt="" src="/services5.svg" />
+            <div className="flex flex-col items-center justify-start gap-[8px]">
+              <b className="relative tracking-[0.04em] leading-[30px]">33k</b>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">
+                Mopnthly Produduct Sale
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded box-border w-[270px] h-[230px] overflow-hidden shrink-0 border-[1px] border-solid border-gray-200">
+          <div className="absolute top-[30px] left-[4px] w-[262px] flex flex-col items-center justify-start gap-[24px]">
+            <img className="relative w-20 h-20" alt="" src="/services6.svg" />
+            <div className="flex flex-col items-center justify-start gap-[12px]">
+              <b className="relative tracking-[0.04em] leading-[30px]">45.5k</b>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">
+                Customer active in our site
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded box-border w-[270px] h-[230px] overflow-hidden shrink-0 border-[1px] border-solid border-gray-200">
+          <div className="absolute top-[30px] left-[28px] flex flex-col items-center justify-start gap-[24px]">
+            <img className="relative w-20 h-20" alt="" src="/services7.svg" />
+            <div className="flex flex-col items-center justify-start gap-[12px]">
+              <b className="relative tracking-[0.04em] leading-[30px]">25k</b>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">
+                Anual gross sale in our site
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-[1404px] left-[135px] flex flex-row items-start justify-start gap-[30px] text-13xl font-heading-32px-medium">
+        <div className="flex flex-col items-start justify-start gap-[32px]">
+          <div className="relative rounded bg-secondary w-[370px] h-[430px] overflow-hidden shrink-0">
+            <img
+              className="absolute top-[39px] left-[67px] w-[236px] h-[391px] object-cover"
+              alt=""
+              src="/image-46@2x.png"
+            />
+          </div>
+          <div className="flex flex-col items-start justify-start gap-[16px]">
+            <div className="flex flex-col items-start justify-start gap-[8px]">
+              <div className="relative tracking-[0.04em] leading-[30px] font-medium">
+                Tom Cruise
+              </div>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">{`Founder & Chairman`}</div>
+            </div>
+            <div className="flex flex-row items-start justify-start gap-[16px]">
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/icontwitter.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconinstagram.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconlinkedin.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-start gap-[32px]">
+          <div className="relative rounded bg-secondary w-[370px] h-[430px] overflow-hidden shrink-0">
+            <img
+              className="absolute top-[33px] left-[38px] w-[294px] h-[397px] object-cover"
+              alt=""
+              src="/image-51@2x.png"
+            />
+          </div>
+          <div className="flex flex-col items-start justify-start gap-[16px]">
+            <div className="flex flex-col items-start justify-start gap-[8px]">
+              <div className="relative tracking-[0.04em] leading-[30px] font-medium">
+                Emma Watson
+              </div>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">
+                Managing Director
+              </div>
+            </div>
+            <div className="flex flex-row items-start justify-start gap-[16px]">
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/icontwitter1.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconinstagram1.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconlinkedin1.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-start gap-[32px]">
+          <div className="relative rounded bg-secondary w-[370px] h-[430px] overflow-hidden shrink-0">
+            <img
+              className="absolute top-[38px] left-[22px] w-[326px] h-[392px] object-cover"
+              alt=""
+              src="/image-47@2x.png"
+            />
+          </div>
+          <div className="flex flex-col items-start justify-start gap-[16px]">
+            <div className="flex flex-col items-start justify-start gap-[8px]">
+              <div className="relative tracking-[0.04em] leading-[30px] font-medium">
+                Will Smith
+              </div>
+              <div className="relative text-base leading-[24px] font-title-12px-medium">
+                Product Designer
+              </div>
+            </div>
+            <div className="flex flex-row items-start justify-start gap-[16px]">
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/icontwitter2.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconinstagram2.svg"
+              />
+              <img
+                className="relative w-6 h-6 overflow-hidden shrink-0"
+                alt=""
+                src="/iconlinkedin2.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-[2008px] left-[663px] flex flex-row items-center justify-start gap-[12px]">
+        <div className="relative rounded-[50%] bg-text2 w-3 h-3 opacity-[0.3]" />
+        <div className="relative rounded-[50%] bg-text2 w-3 h-3 opacity-[0.3]" />
+        <img className="relative w-4 h-4" alt="" src="/group-1000005940.svg" />
+        <div className="relative rounded-[50%] bg-text2 w-3 h-3 opacity-[0.3]" />
+        <div className="relative rounded-[50%] bg-text2 w-3 h-3 opacity-[0.3]" />
+      </div>
+      <div className="absolute top-[2465px] left-[0px] bg-text2 w-[1440px] h-[440px] overflow-hidden text-base text-bg">
+        <div className="absolute top-[376px] left-[0px] flex flex-col items-center justify-start gap-[16px] opacity-[0.4]">
+          <img
+            className="relative w-[1440px] h-px opacity-[0.5]"
+            alt=""
+            src="/underline1.svg"
+          />
+            </div>
+          </div>
+        </div>
   );
 };
-export default About
+
+export default About;

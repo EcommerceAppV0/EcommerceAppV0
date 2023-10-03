@@ -39,16 +39,17 @@ function App() {
 
       {/* <Error /> */}
 
+      <Routes>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/error' element={<Error/>}/>
+        <Route path='/about' element={<About/>}/>
+        {/* <Route path=''/>
+        <Route/> */}
+      </Routes>
 
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      {/* <Error /> */}
-
-
-      {/* Contact Done */}
-      {/* you needd to comment all to see this clearly */}
-      {/* <Contact /> */}
-
+//! this is for re-pull req
       {/* the footer will be the last compnetnts for all  */}
       <Footer />
     </div>

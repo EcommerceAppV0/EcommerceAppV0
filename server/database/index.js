@@ -12,9 +12,13 @@ sequelize.authenticate()
 
 const User = require("../models/userModel")(sequelize, DataTypes)
 const Product = require("../models/productModel")(sequelize, DataTypes)
+const Category = require("../models/categoryModel")(sequelize, DataTypes)
 
 User.hasMany(Product)
 Product.belongsTo(User)
+
+Category.hasMany(Product)
+Product.belongsTo(Category)
 
 
 
@@ -29,4 +33,5 @@ Product.belongsTo(User)
 const db = {}
 db.User = User
 db.Product = Product
+db.Category = Category
 module.exports = db;    

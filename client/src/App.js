@@ -3,6 +3,7 @@ import Navabr from './components/Nabar/Navabr';
 import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
 import Login from "./components/Login/Login";
+import Error from './components/Error/Error';
 function App() {
   return (
     <div >
@@ -11,8 +12,9 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-      <SignUp />
-      <Login />
+      {/* <SignUp />
+      <Login /> */}
+      <Error />
 
 
 

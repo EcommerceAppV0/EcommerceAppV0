@@ -2,11 +2,13 @@ import React from 'react';
 import Navabr from './components/Nabar/Navabr';
 import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
-import About from './components/AboutUs/AboutUs';
 import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
+import {Routes , Route} from "react-router-dom"
+import About from "./components/AboutUs/AboutUs"
+
 function App() {
   return (
     <div >
@@ -15,37 +17,20 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-
-
-      <SignUp />
-      <Login />   
-      <Error />
-
-
       {/* <SignUp />
       <Login /> */}
-      {/* <About /> */}
-
-      {/* <SignUp />
-      <Login />
-      <Error /> */}
-
-
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      <About />
-
       {/* <Error /> */}
 
+      <Routes>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/error' element={<Error/>}/>
+        <Route path='/about' element={<About/>}/>
+        {/* <Route path=''/>
+        <Route/> */}
+      </Routes>
 
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      {/* <Error /> */}
-
-
-      {/* Contact Done */}
-      {/* you needd to comment all to see this clearly */}
-      {/* <Contact /> */}
 
       {/* the footer will be the last compnetnts for all  */}
       <Footer />

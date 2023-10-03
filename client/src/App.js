@@ -2,11 +2,13 @@ import React from 'react';
 import Navabr from './components/Nabar/Navabr';
 import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
-import About from './components/AboutUs/AboutUs';
 import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
+import {Routes , Route} from "react-router-dom"
+import About from "./components/AboutUs/AboutUs"
+
 function App() {
   return (
     <div >
@@ -17,30 +19,30 @@ function App() {
       {/* heree it will be the routers */}
 
 
-      {/* <SignUp />
+      <SignUp />
       <Login />   
       <Error />
 
 
-      <SignUp />
-      <Login />
-      <About />
-
-      <SignUp />
-      <Login />
-      <Error /> */}
-
-
       {/* <SignUp />
-      <Login />
-      <About />
-
-      <Error /> */}
-
+      <Login /> */}
+      {/* <About /> */}
 
       {/* <SignUp />
       <Login />
       <Error /> */}
+
+
+      {/* <SignUp /> */}
+      {/* <Login /> */}
+      <About />
+
+      {/* <Error /> */}
+
+
+      {/* <SignUp /> */}
+      {/* <Login /> */}
+      {/* <Error /> */}
 
 
       {/* Contact Done */}

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
-body {
+/* body {
   margin: 0;
   line-height: normal;
-}
+} */
 :root {
   /* fonts */
   --title-12px-medium: Poppins;
@@ -87,7 +87,7 @@ body {
   .nothing1 {
     line-height: 1.31rem;
   }
-  .roadmap {
+  .roadmap1 {
     position: absolute;
     top: 13.88rem;
     left: 8.44rem;

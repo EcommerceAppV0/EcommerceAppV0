@@ -3,6 +3,7 @@ import Navabr from './components/Nabar/Navabr';
 import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
 import About from './components/AboutUs/AboutUs';
+import Login from "./components/Login/Login";
 function App() {
   return (
     <div >
@@ -11,9 +12,11 @@ function App() {
       <Navabr />
 
       {/* heree it will be the routers */}
-      {/* <SignUp /> */}
-      <About/>
-      
+      <SignUp />
+      <Login />
+
+
+
 
 
 

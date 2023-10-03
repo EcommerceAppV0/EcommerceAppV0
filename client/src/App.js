@@ -6,7 +6,7 @@ import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
-import {Routes , Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import About from "./components/AboutUs/AboutUs"
 
 function App() {
@@ -19,32 +19,13 @@ function App() {
       {/* heree it will be the routers */}
 
 
-      <SignUp />
-      <Login />   
-      <Error />
-
-
-      {/* <SignUp />
-      <Login /> */}
-      {/* <About /> */}
-
-      {/* <SignUp />
-      <Login />
-      <Error /> */}
-
-
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      <About />
-
-      {/* <Error /> */}
 
       <Routes>
-        <Route path="/login" element={<Login/>}/>
-        <Route path='/signup' element={<SignUp/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/error' element={<Error/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path="/login" element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/error' element={<Error />} />
+        <Route path='/about' element={<About />} />
         {/* <Route path=''/>
         <Route/> */}
       </Routes>

@@ -4,6 +4,7 @@ import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
 import About from './components/AboutUs/AboutUs';
 import Login from "./components/Login/Login";
+import Error from './components/Error/Error';
 function App() {
   return (
     <div >
@@ -15,6 +16,7 @@ function App() {
       {/* <SignUp />
       <Login /> */}
       <About />
+      <Error />
 
 
 

@@ -2,7 +2,9 @@ import React from 'react'
 import "./style.css"
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
 
+
 const Login = () => {
+    
     return (
         <div className='login-container'>
             <div className='login-frame1'>

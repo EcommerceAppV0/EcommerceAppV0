@@ -5,18 +5,18 @@ import SignUp from './components/SignUp/SignUp';
 import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
+import { Footer } from './components/Footer/Footer';
 function App() {
   return (
     <div >
-      hi
       {/* This to compnents will be for all the app  */}
       <TopHeader />
       <Navabr />
 
       {/* heree it will be the routers */}
-      {/* <SignUp />
-      <Login /> */}
-      {/* <Error /> */}
+      <SignUp />
+      <Login />
+      <Error />
 
 
 
@@ -24,7 +24,7 @@ function App() {
       <Contact />
 
       {/* the footer will be the last compnetnts for all  */}
-
+      <Footer />
     </div>
   );
 }

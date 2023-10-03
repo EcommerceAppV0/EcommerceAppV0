@@ -16,13 +16,13 @@ function App() {
 
       {/* heree it will be the routers */}
 
-      <SignUp />
-      <Login />
-      <Error />
-
-
       {/* <SignUp />
-      <Login /> */}
+      <Login />
+      <Error /> */}
+
+
+      {/* <SignUp /> */}
+      {/* <Login /> */}
       <About />
       {/* <Error /> */}
 
@@ -30,7 +30,6 @@ function App() {
       {/* <SignUp /> */}
       {/* <Login /> */}
       {/* <Error /> */}
-
 
 
       {/* Contact Done */}

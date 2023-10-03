@@ -20,15 +20,15 @@ function App() {
       <About />
       {/* <Error /> */}
 
-      <SignUp />
-      <Login />
-      <Error />
+      {/* <SignUp /> */}
+      {/* <Login /> */}
+      {/* <Error /> */}
 
 
 
       {/* Contact Done */}
-
-      <Contact />
+      {/* you needd to comment all to see this clearly */}
+      {/* <Contact /> */}
 
       {/* the footer will be the last compnetnts for all  */}
 

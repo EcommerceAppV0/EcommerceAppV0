@@ -1,43 +1,38 @@
 //matmesouch bsh nkamlha : hakim
-
-import { useCallback } from "react";
+//fixed from Mpk
 import "./style.css";
-import image from './images/2girls.png';
-import worker1 from './images/image 46.png';
-import worker2 from './images/image 47.png';
-import worker3 from './images/image 51.png';
-import linkedin from './images/Icon-Linkedin.svg';
-import instagram from './images/Instagram.svg';
-import twitter from './images/twitter.svg';
-import point from './images/point.svg';
-import frame701 from './images/Frame 701.svg';
-import frame702 from './images/Frame 702.svg';
-import frame703 from './images/Frame 703.svg';
-import circle from './images/Circle.svg';
-import white from './images/white.svg';
+import image from '../../assets/images/2girls.png';
+import worker1 from '../../assets/images/image 46.png';
+import worker2 from '../../assets/images/image 47.png';
+import worker3 from '../../assets/images/image 51.png';
+import linkedin from '../../assets/images/Icon-Linkedin.svg';
+import instagram from '../../assets/images/Instagram.svg';
+import twitter from '../../assets/images/twitter.svg';
+import point from '../../assets/images/point.svg';
+import frame701 from '../../assets/images/Frame 701.svg';
+import frame702 from '../../assets/images/Frame 702.svg';
+import frame703 from '../../assets/images/Frame 703.svg';
+import circle from '../../assets/images/Circle.svg';
+import white from '../../assets/images/white.svg';
 
 
 
 
 
 const About = () => {
-  const onHeaderContainer1Click = useCallback(() => {
-    // Please sync "Contact" to the project
-  }, []);
-
   return (
     <div className="about">
       <img className="about-child" alt="" src="/line-3.svg" />
-      <div className="roadmap">
+      <div className="roadmap1">
         <div className="account">Home</div>
         <img className="roadmap-child" alt="" src="/line-13.svg" />
         <div className="english">About</div>
-        <img className="roadmap-item" alt="" src="/line-14.svg" />
+        {/* <img className="roadmap-item" alt="" src="/line-14.svg" />
         <div className="nothing1">Nothing</div>
         <img className="roadmap-item" alt="" src="/line-15.svg" />
         <div className="nothing1">Nothing</div>
         <img className="roadmap-item" alt="" src="/line-16.svg" />
-        <div className="nothing1">Nothing</div>
+        <div className="nothing1">Nothing</div> */}
       </div>
       <div className="our-story-parent">
         <div className="our-story">Our Story</div>

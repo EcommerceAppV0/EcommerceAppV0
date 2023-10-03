@@ -4,6 +4,8 @@ import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
 import ProductsDetails from './components/ProductsDetails/ProductsDetails';
+import Login from "./components/Login/Login";
+import Error from './components/Error/Error';
 function App() {
   return (
     <div >
@@ -16,6 +18,12 @@ function App() {
       <ProductsDetails/>
 
       
+      {/* <SignUp />
+      <Login /> */}
+      <Error />
+
+
+
 
 
 

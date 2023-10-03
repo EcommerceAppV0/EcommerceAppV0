@@ -31,7 +31,6 @@ function App() {
         <Route/> */}
       </Routes>
 
-//! this is for re-pull req
       {/* the footer will be the last compnetnts for all  */}
       <Footer />
     </div>

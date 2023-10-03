@@ -13,6 +13,8 @@ function App() {
       {/* heree it will be the routers */}
       <SignUp />
       <Footer />
+      
+
 
 
 

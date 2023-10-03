@@ -10,7 +10,13 @@ sequelize.authenticate()
     .catch(err => console.log(err));
 
 
-const Client = require("../models/clientModel")(sequelize, DataTypes)
+const User = require("../models/userModel")(sequelize, DataTypes)
+const Product = require("../models/productModel")(sequelize, DataTypes)
+
+User.hasMany(Product)
+Product.belongsTo(User)
+
+
 
 
 
@@ -21,5 +27,6 @@ const Client = require("../models/clientModel")(sequelize, DataTypes)
 
 
 const db = {}
-db.Client = Client
+db.User = User
+db.Product = Product
 module.exports = db;    

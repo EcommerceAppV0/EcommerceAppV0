@@ -6,6 +6,7 @@ import About from './components/AboutUs/AboutUs';
 import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
+import { Footer } from './components/Footer/Footer';
 function App() {
   return (
     <div >
@@ -15,10 +16,16 @@ function App() {
 
       {/* heree it will be the routers */}
 
+      <SignUp />
+      <Login />
+      <Error />
+
+
       {/* <SignUp />
       <Login /> */}
       <About />
       {/* <Error /> */}
+
 
       {/* <SignUp /> */}
       {/* <Login /> */}
@@ -31,7 +38,7 @@ function App() {
       {/* <Contact /> */}
 
       {/* the footer will be the last compnetnts for all  */}
-
+      <Footer />
     </div>
   );
 }

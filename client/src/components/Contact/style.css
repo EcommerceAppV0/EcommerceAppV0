@@ -1,0 +1,32 @@
+.contact {
+  width: 100%;
+  /* background-color: red; */
+  height: 100vh;
+  position: relative;
+}
+
+.child-conatct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aqua;
+  width: 80%;
+  display: flex;
+  gap: 2rem;
+  height: 80%;
+}
+
+.contact1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 50%;
+}
+
+.sub-call {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

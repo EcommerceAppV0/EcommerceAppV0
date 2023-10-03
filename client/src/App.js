@@ -17,30 +17,30 @@ function App() {
       {/* heree it will be the routers */}
 
 
-      <SignUp />
+      {/* <SignUp />
       <Login />   
       <Error />
 
 
-      {/* <SignUp />
-      <Login /> */}
-      {/* <About /> */}
+      <SignUp />
+      <Login />
+      <About />
 
-      {/* <SignUp />
+      <SignUp />
       <Login />
       <Error /> */}
 
 
-      {/* <SignUp /> */}
-      {/* <Login /> */}
+      {/* <SignUp />
+      <Login />
       <About />
 
-      {/* <Error /> */}
+      <Error /> */}
 
 
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      {/* <Error /> */}
+      {/* <SignUp />
+      <Login />
+      <Error /> */}
 
 
       {/* Contact Done */}

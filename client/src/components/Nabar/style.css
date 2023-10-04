@@ -83,3 +83,44 @@
     align-items: center;
     gap: 1rem;
 }
+
+
+
+
+
+
+/* to hide the arrow */
+.dropdown-toggle::before {
+    display: none !important;
+}
+
+.dropdown-menu.show {
+    background-color: #666166;
+    width: 15rem !important;
+    display: flex;
+    gap: 0.5rem !important;
+    flex-direction: column;
+
+}
+
+
+
+
+.dropdown-item {
+    display: flex !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    color: #FAFAFA !important;
+    text-align: center;
+    height: 1.8rem;
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+}
+
+.dropdown-item:hover {
+    background-color: #666166;
+    filter: brightness(80%);
+}

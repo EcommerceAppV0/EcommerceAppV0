@@ -17,19 +17,19 @@
     bottom: 0 !important;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
+    flex-direction: column;
   }
   
   .footer .frame {
-    align-items: center;
-    display: inline-flex;
+    display: flex ;
     flex-direction: column;
     gap: 16px;
-    left: 0;
     opacity: 0.4;
     position: absolute;
-    top: 376px;
-    width: 50%;
+    padding-left: 0 !important;
+    align-items: center !important;
+    width: 100%;
+    bottom: 0;
   }
   
   .footer .frame-wrapper {
@@ -71,12 +71,9 @@
   
   .footer .frame-3 {
     align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     gap: 87px;
     justify-content: center;
-    left: 135px;
-    position: absolute;
-    top: 80px;
   }
   
   .footer .frame-4 {

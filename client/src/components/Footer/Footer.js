@@ -11,21 +11,7 @@ import vector2 from "../../assets/images/vector2.png"
 export const Footer = () => {
   return (
     <div className="footer">
-      <div className="frame">
-        <div className="under-line" />
-        <div className="frame-wrapper">
-          <div className="frame-2">
-            <div className="icon-copyright-screen">
-              <img
-                className="group"
-                alt="Group"
-                src={group1}
-              />
-            </div>
-            <p className="p">Copyright Rimel 2022. All right reserved</p>
-          </div>
-        </div>
-      </div>
+      
       <div className="frame-3">
         <div className="frame-4">
           <div className="frame-5">
@@ -117,6 +103,21 @@ export const Footer = () => {
             <div className="icon-linkedin-screen">
               <img className="vector" alt="Vector" src={vector2} />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="frame">
+        <div className="under-line" />
+        <div className="frame-wrapper">
+          <div className="frame-2">
+            <div className="icon-copyright-screen">
+              <img
+                className="group"
+                alt="Group"
+                src={group1}
+              />
+            </div>
+            <p className="p">Copyright Rimel 2022. All right reserved</p>
           </div>
         </div>
       </div>

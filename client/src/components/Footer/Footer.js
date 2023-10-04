@@ -17,11 +17,15 @@ export const Footer = () => {
           <div className="frame-5">
             <div className="frame-5">
               <div className="logo">
-                <div className="text-wrapper">Exclusive</div>
+                <div className="text-wrapper-4">Exclusive</div>
               </div>
               <div className="text-wrapper-2">Subscribe</div>
             </div>
             <p className="text-wrapper-3">Get 10% off your first order</p>
+            <div className="email-sender">
+              <input placeholder="Enter your email"/>
+              <img src={vector}/>
+            </div>
           </div>
         </div>
         <div className="frame-5">

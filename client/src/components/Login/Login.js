@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./style.css"
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
-import { useSelector, useDispatch } from 'react-redux'
+// import {  useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
-
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 const Login = () => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
+    const { user } = useSelector((state) => state.value)
     const navigate = useNavigate()
     const [login, { isLoading }] = useLoginMutation()
     const [form, setForm] = useState({
@@ -23,11 +24,18 @@ const Login = () => {
             // then navigate
             localStorage.setItem('userToken', JSON.stringify(res.token))
             // then go to contact 
+            //will be changed after
             navigate("/contact")
         } catch (error) {
             console.log(error);
         }
     }
+    //after will be changed
+    useEffect(() => {
+        if (user) {
+            navigate('/contact')
+        }
+    }, [navigate, user])
 
     return (
         <div className='login-container'>
@@ -49,6 +57,7 @@ const Login = () => {
                         <input
                             onChange={(e) => handleFom(e)}
                             name='password'
+                            type='password'
                             className='password'
                             placeholder='Password' />
                     </div>
@@ -58,6 +67,8 @@ const Login = () => {
                         >Log In</button>
                         <div>Forget Password?</div>
                     </div>
+                    {/* here we will add some toast for loading */}
+                    {isLoading && <h1>Loading....</h1>}
                 </div>
             </div>
 

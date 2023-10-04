@@ -21,5 +21,5 @@ export const userSlicer = createSlice({
     }
 })
 
-export const { setUser, logout, registerUser } = userSlicer.actions
+export const { setUser, logout } = userSlicer.actions
 export default userSlicer.reducer

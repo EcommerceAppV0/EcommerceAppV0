@@ -7,12 +7,11 @@ import { useNavigate } from 'react-router-dom'
 import { setUser } from '../../slicers/userSlicer'
 const SignUp = () => {
     const [register, { isLoading }] = useRegisterMutation()
-    // console.log(user) ;
     const { user } = useSelector((state) => state.value)
-    console.log(user);
-
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    //redirect here if the user exists
     useEffect(() => {
         if (user) {
             navigate('/login')
@@ -67,6 +66,7 @@ const SignUp = () => {
                         <input
                             onChange={(e) => handleFom(e)}
                             name='password'
+                            type='password'
                             className='password' placeholder='Password' />
                     </div>
                     <div className='sub-form-container2'>
@@ -103,6 +103,8 @@ const SignUp = () => {
                                 </svg>
                             </div>
                         </div>
+                        {/* here we will add some toast for loading */}
+                        {isLoading && <h1>waiting....</h1>}
                     </div>
                 </div>
             </div>

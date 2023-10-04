@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     user: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null,
     userToken: localStorage.getItem('userToken') ? JSON.parse(localStorage.getItem('userToken')) : null,
-    loggedIn: false,
+    loggedIn: localStorage.getItem('userToken') ? true : false,
 }
 
 export const userSlicer = createSlice({
@@ -13,7 +13,8 @@ export const userSlicer = createSlice({
         setLoggedIn: (state, action) => {
             const { token, loggedIn } = action.payload;
             localStorage.setItem('userToken', JSON.stringify(token))
-            state.token = token;
+            state.userToken = token;
+            // changed
             state.loggedIn = loggedIn;
         },
         setUser: (state, action) => {
@@ -22,9 +23,12 @@ export const userSlicer = createSlice({
         },
         logout: (state) => {
             state.user = null
+            state.loggedIn = false
             localStorage.removeItem('userInfo')
             localStorage.removeItem('userToken')
         },
+
+
     }
 })
 

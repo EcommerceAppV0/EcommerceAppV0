@@ -5,14 +5,18 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import "./style.css"
 import { useSelector, useDispatch } from 'react-redux'
 import { logout } from '../../slicers/userSlicer'
+import { useNavigate } from 'react-router-dom';
 
 const Navabr = () => {
     const { loggedIn } = useSelector((state) => state.value)
     console.log(loggedIn);
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleLogout = () => {
         dispatch(logout())
+        // then will be changed 
+        navigate("/login")
     }
 
 
@@ -23,10 +27,18 @@ const Navabr = () => {
             <div className='navbar-container'>
                 <div className='logo'>Exclusive</div>
                 <div className='tabs'>
-                    <div className='link'>Home</div>
-                    <div className='link'>Contact</div>
-                    <div className='link'>About</div>
-                    <div className='link'>Sign Up</div>
+                    <div className='link'
+                    // onClick={()=>navigate("/")}
+                    >Home</div>
+                    <div className='link'
+                        onClick={() => navigate("/contact")}
+                    >Contact</div>
+                    <div className='link'
+                        onClick={() => navigate("/about")}
+                    >About</div>
+                    <div className='link'
+                        onClick={() => navigate("/signup")}
+                    >Sign Up</div>
                 </div>
                 <div className='frame'>
                     <div className='search-bar'>
@@ -98,7 +110,7 @@ const Navabr = () => {
                                     My Reviews
                                 </Dropdown.Item>
                                 <Dropdown.Item
-                                    onClick={() => handleLogout()}      
+                                    onClick={() => handleLogout()}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="27" viewBox="0 0 24 24" fill="none">
                                         <path d="M4 12H13.5M6 15L3 12L6 9M11 7V6C11 5.46957 11.2107 4.96086 11.5858 4.58579C11.9609 4.21071 12.4696 4 13 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H13C12.4696 20 11.9609 19.7893 11.5858 19.4142C11.2107 19.0391 11 18.5304 11 18V17" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

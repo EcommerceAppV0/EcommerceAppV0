@@ -1,8 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style.css"
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
-
+import { useRegisterMutation } from '../../slicers/userApiSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { setUser } from '../../slicers/userSlicer'
 const SignUp = () => {
+    const [register, { isLoading }] = useRegisterMutation()
+    const { user } = useSelector((state) => state.value)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    //redirect here if the user exists
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate('/login')
+    //     }
+    // }, [navigate, user])
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        password: "",
+        type: "client"
+    })
+    const handleFom = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = async (body) => {
+        try {
+            const res = await register(body).unwrap()
+            console.log(res);
+            const { id, email, name, type } = res.result
+            dispatch(setUser({ id, email, name, type }))
+            navigate('/login')
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
     return (
         <div className='signup-container'>
             <div className='frame1'>
@@ -15,12 +55,27 @@ const SignUp = () => {
                 </div>
                 <div className='form-container'>
                     <div className='sub-form-container'>
-                        <input className='name' placeholder='Name' />
-                        <input className='mail' placeholder='Email or Phone Number' />
-                        <input className='password' placeholder='Password' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='name'
+                            className='name' placeholder='Name' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='email'
+                            className='mail' placeholder='Email or Phone Number' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='password'
+                            type='password'
+                            className='password' placeholder='Password' />
                     </div>
                     <div className='sub-form-container2'>
-                        <button className='btn-add'>Create Account</button>
+                        <button className='btn-add'
+                            onClick={() => {
+                                handleSubmit(form)
+
+                            }}
+                        >Create Account</button>
                         <div className='wrap' >
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2574_2219)">
@@ -47,8 +102,9 @@ const SignUp = () => {
                                     </g>
                                 </svg>
                             </div>
-
                         </div>
+                        {/* here we will add some toast for loading */}
+                        {isLoading && <h1>waiting....</h1>}
                     </div>
                 </div>
             </div>

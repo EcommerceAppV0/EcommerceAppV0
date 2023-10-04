@@ -73,7 +73,6 @@ const SignUp = () => {
                         <button className='btn-add'
                             onClick={() => {
                                 handleSubmit(form)
-
                             }}
                         >Create Account</button>
                         <div className='wrap' >
@@ -95,7 +94,9 @@ const SignUp = () => {
                         <div className='credentinals'>
                             <span>Already have account ?</span>
                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                                <span >Log in</span>
+                                <span
+                                    onClick={() => navigate('/login')}
+                                >Log in</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="2" viewBox="0 0 48 2" fill="none">
                                     <g opacity="0.5">
                                         <line x1="0.5" y1="1" x2="47.5" y2="1" stroke="black" />

@@ -31,11 +31,11 @@ const Login = () => {
         }
     }
     //after will be changed
-    useEffect(() => {
-        if (user) {
-            navigate('/contact')
-        }
-    }, [navigate, user])
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate('/contact')
+    //     }
+    // }, [navigate, user])
 
     return (
         <div className='login-container'>

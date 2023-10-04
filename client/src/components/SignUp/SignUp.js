@@ -12,11 +12,11 @@ const SignUp = () => {
     const navigate = useNavigate()
 
     //redirect here if the user exists
-    useEffect(() => {
-        if (user) {
-            navigate('/login')
-        }
-    }, [navigate, user])
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate('/login')
+    //     }
+    // }, [navigate, user])
     const [form, setForm] = useState({
         name: "",
         email: "",

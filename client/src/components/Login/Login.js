@@ -11,7 +11,7 @@ const Login = () => {
     const dispatch = useDispatch()
 
     const navigate = useNavigate()
-    const [login, { isLoading }] = useLoginMutation()
+    const [login, { isLoading, isError }] = useLoginMutation()
     const [form, setForm] = useState({
         email: '',
         password: ''
@@ -69,7 +69,8 @@ const Login = () => {
                         <div>Forget Password?</div>
                     </div>
                     {/* here we will add some toast for loading */}
-                    {isLoading && <h1>Loading....</h1>}
+                    {isLoading && <h1>👨laoding</h1>}
+                    {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>
 

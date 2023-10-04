@@ -21,14 +21,14 @@ const Login = () => {
     }
     const handleSubmit = async (body) => {
         try {
-            const res = await login(body).unwrap()
-            console.log(res);
+            const { token } = await login(body).unwrap()
+            // const { token } = res
+            // console.log(res);
             // then navigate
-            localStorage.setItem('userToken', JSON.stringify(res.token))
-            dispatch(setLoggedIn(true))
+            dispatch(setLoggedIn({ token, loggedIn: true }))
             // then go to contact 
             //will be changed after
-            navigate("/contact")
+            navigate("/about")
         } catch (error) {
             console.log(error);
         }

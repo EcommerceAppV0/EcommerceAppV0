@@ -17,19 +17,20 @@
     bottom: 0 !important;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
+    flex-direction: column;
+    font-family:  Poppins;
   }
   
   .footer .frame {
-    align-items: center;
-    display: inline-flex;
+    display: flex ;
     flex-direction: column;
     gap: 16px;
-    left: 0;
     opacity: 0.4;
     position: absolute;
-    top: 376px;
-    width: 50%;
+    padding-left: 0 !important;
+    align-items: center !important;
+    width: 100%;
+    bottom: 0;
   }
   
   .footer .frame-wrapper {
@@ -71,12 +72,9 @@
   
   .footer .frame-3 {
     align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     gap: 87px;
-    justify-content: center;
-    left: 135px;
-    position: absolute;
-    top: 80px;
+    justify-content: space-evenly;
   }
   
   .footer .frame-4 {
@@ -135,9 +133,9 @@
   .footer .text-wrapper-4 {
     color: var(--text);
     font-family: var(--title-20px-medium-font-family);
-    font-size: var(--title-20px-medium-font-size);
+    font-size: 20px;
     font-style: var(--title-20px-medium-font-style);
-    font-weight: var(--title-20px-medium-font-weight);
+    font-weight: bold;
     letter-spacing: var(--title-20px-medium-letter-spacing);
     line-height: var(--title-20px-medium-line-height);
     margin-top: -1px;
@@ -235,7 +233,6 @@
   }
   .icon-copyright-screen {
     height: 20px;
-    position: relative;
     width: 20px;
   }
   
@@ -397,7 +394,30 @@
     width: 21px;
   }
 
-  input{
-    background-color: white;
-    opacity: 1;
+  .email-sender{
+    display: flex;
+    border-style: solid;
+    border-color: white ;
+    border-width: 2px;
+    padding:  0.75rem 0.75rem 0.75rem 1rem;
+    border-radius: 0.25rem ;
+    align-items: center;
+  }
+
+  .email-sender input{
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+  }
+
+  .email-sender img{
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .email-sender img:hover{
+    translate: calc(0.25rem);
+  }
+  .footer img{
+    cursor: pointer;
   }

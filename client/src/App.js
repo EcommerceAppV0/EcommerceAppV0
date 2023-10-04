@@ -9,6 +9,7 @@ import { Footer } from './components/Footer/Footer';
 import { Routes, Route, Navigate } from "react-router-dom"
 import About from "./components/AboutUs/AboutUs"
 import { useSelector } from 'react-redux'
+import Account from './components/Account/Account';
 
 
 
@@ -30,12 +31,13 @@ function App() {
       <Routes>
         {/* this will be for homepage */}
         {/* <Route path='/' element={<Error />} /> */}
-
+        <Route path="/"    element={<Login/> }/>        //! this will show the login when the website is loaded instead of the error page - Amine
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/error' element={<Error />} />
         <Route path='/about' element={<About />} />
+        <Route path='/account' element={<Account />} />
         <Route path='/*' element={<Error />} />
         {/* handle errror routeres  */}
 

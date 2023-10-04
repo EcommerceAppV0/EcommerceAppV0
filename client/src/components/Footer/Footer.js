@@ -11,31 +11,21 @@ import vector2 from "../../assets/images/vector2.png"
 export const Footer = () => {
   return (
     <div className="footer">
-      <div className="frame">
-        <div className="under-line" />
-        <div className="frame-wrapper">
-          <div className="frame-2">
-            <div className="icon-copyright-screen">
-              <img
-                className="group"
-                alt="Group"
-                src={group1}
-              />
-            </div>
-            <p className="p">Copyright Rimel 2022. All right reserved</p>
-          </div>
-        </div>
-      </div>
+      
       <div className="frame-3">
         <div className="frame-4">
           <div className="frame-5">
             <div className="frame-5">
               <div className="logo">
-                <div className="text-wrapper">Exclusive</div>
+                <div className="text-wrapper-4">Exclusive</div>
               </div>
               <div className="text-wrapper-2">Subscribe</div>
             </div>
             <p className="text-wrapper-3">Get 10% off your first order</p>
+            <div className="email-sender">
+              <input placeholder="Enter your email"/>
+              <img src={vector}/>
+            </div>
           </div>
         </div>
         <div className="frame-5">
@@ -117,6 +107,21 @@ export const Footer = () => {
             <div className="icon-linkedin-screen">
               <img className="vector" alt="Vector" src={vector2} />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="frame">
+        <div className="under-line" />
+        <div className="frame-wrapper">
+          <div className="frame-2">
+            <div className="icon-copyright-screen">
+              <img
+                className="group"
+                alt="Group"
+                src={group1}
+              />
+            </div>
+            <p className="p">Copyright Rimel 2022. All right reserved</p>
           </div>
         </div>
       </div>

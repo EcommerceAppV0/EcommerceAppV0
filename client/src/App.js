@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux'
 
 
 function App() {
-  const { user } = useSelector((state) => state.value)
+  const { user, loggedIn } = useSelector((state) => state.value)
 
 
   return (
@@ -36,6 +36,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/error' element={<Error />} />
         <Route path='/about' element={<About />} />
+        <Route path='/*' element={<Error />} />
+        {/* handle errror routeres  */}
 
         {/* <Route path=''/>
         <Route/> */}

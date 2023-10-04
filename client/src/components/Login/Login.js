@@ -22,8 +22,6 @@ const Login = () => {
     const handleSubmit = async (body) => {
         try {
             const { token } = await login(body).unwrap()
-            // const { token } = res
-            // console.log(res);
             // then navigate
             dispatch(setLoggedIn({ token, loggedIn: true }))
             // then go to contact 

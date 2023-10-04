@@ -4,10 +4,12 @@ import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
 // import {  useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
-import { useSelector } from 'react-redux/es/hooks/useSelector'
+import { useSelector, useDispatch } from 'react-redux'
+import { setLoggedIn } from "../../slicers/userSlicer"
 const Login = () => {
-    // const dispatch = useDispatch()
     const { user } = useSelector((state) => state.value)
+    const dispatch = useDispatch()
+
     const navigate = useNavigate()
     const [login, { isLoading }] = useLoginMutation()
     const [form, setForm] = useState({
@@ -23,6 +25,7 @@ const Login = () => {
             console.log(res);
             // then navigate
             localStorage.setItem('userToken', JSON.stringify(res.token))
+            dispatch(setLoggedIn(true))
             // then go to contact 
             //will be changed after
             navigate("/contact")

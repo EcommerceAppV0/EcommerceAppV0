@@ -29,6 +29,9 @@ function App() {
 
       {/* we will fix the private routers depending on the state  */}
       <Routes>
+        {/* this will be for homepage */}
+        {/* <Route path='/' element={<Error />} /> */}
+
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/contact' element={<Contact />} />

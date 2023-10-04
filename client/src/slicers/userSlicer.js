@@ -11,7 +11,10 @@ export const userSlicer = createSlice({
     initialState,
     reducers: {
         setLoggedIn: (state, action) => {
-            state.loggedIn = action.payload
+            const { token, loggedIn } = action.payload;
+            localStorage.setItem('userToken', JSON.stringify(token))
+            state.token = token;
+            state.loggedIn = loggedIn;
         },
         setUser: (state, action) => {
             state.user = action.payload
@@ -25,5 +28,5 @@ export const userSlicer = createSlice({
     }
 })
 
-export const { setUser, logout ,setLoggedIn} = userSlicer.actions
+export const { setUser, logout, setLoggedIn } = userSlicer.actions
 export default userSlicer.reducer

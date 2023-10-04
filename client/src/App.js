@@ -8,14 +8,9 @@ import Contact from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { Routes, Route } from "react-router-dom"
 import About from "./components/AboutUs/AboutUs"
-import { logout, setUser,registerUser } from "./slicers/userSlicer"
-import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
 
-  const user = useSelector((state) => state.value.user)
-  console.log(user);
-  const dispatch = useDispatch()
 
  
 

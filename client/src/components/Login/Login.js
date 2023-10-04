@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./style.css"
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
-
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useLoginMutation } from '../../slicers/userApiSlice'
 
 const Login = () => {
-    
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const [login, { isLoading }] = useLoginMutation()
+    const [form, setForm] = useState({
+        email: '',
+        password: ''
+    })
+    const handleFom = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value })
+    }
+    const handleSubmit = async (body) => {
+        try {
+            const res = await login(body).unwrap()
+            console.log(res);
+            // then navigate
+            localStorage.setItem('userToken', JSON.stringify(res.token))
+            // then go to contact 
+            navigate("/contact")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
         <div className='login-container'>
             <div className='login-frame1'>
@@ -17,11 +41,21 @@ const Login = () => {
                 </div>
                 <div className='login-form-container'>
                     <div className='login-sub-form-container'>
-                        <input className='mail' placeholder='Email or Phone Number' />
-                        <input className='password' placeholder='Password' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='email'
+                            className='mail'
+                            placeholder='Email or Phone Number' />
+                        <input
+                            onChange={(e) => handleFom(e)}
+                            name='password'
+                            className='password'
+                            placeholder='Password' />
                     </div>
                     <div className='login-sub-form-container2'>
-                        <button className='login-btn'>Log In</button>
+                        <button className='login-btn'
+                            onClick={() => handleSubmit(form)}
+                        >Log In</button>
                         <div>Forget Password?</div>
                     </div>
                 </div>

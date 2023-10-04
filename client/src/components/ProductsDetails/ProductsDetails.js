@@ -1,5 +1,27 @@
 import React from 'react'
 import "./style.css"
+import delivery from "../../assets/images/delivery.png"
+import returnIcon from "../../assets/images/icon-return.png"
+import heart from "../../assets/images/heart.png"
+import eye from "../../assets/images/eye.png"
+import image57 from "../../assets/images/image-57.png"
+import image58 from "../../assets/images/image-58.png"
+import image59 from "../../assets/images/image-59.png"
+import image61 from "../../assets/images/image-61.png"
+import image63 from "../../assets/images/image-63.png"
+import product1 from "../../assets/images/product-1.png"
+import product2 from "../../assets/images/product-2.png"
+import product3 from "../../assets/images/product-3.png"
+import product4 from "../../assets/images/product-4.png"
+import star from "../../assets/images/star.png"
+import halfstar from "../../assets/images/half-star.png"
+import plus from "../../assets/images/icon-plus.png"
+import minus from "../../assets/images/icon-minus.png"
+import blue from "../../assets/images/blue.png"
+import red from "../../assets/images/red.png"
+import related from "../../assets/images/related.png"
+
+
 const ProductsDetails = () => {
     return (
        
@@ -36,35 +58,35 @@ const ProductsDetails = () => {
           </div>
           <div class="product-detailspage-frame894">
             <img
-              src="."
+              src={image63}
               alt="image632514"
               class="product-detailspage-image63"
             />
           </div>
           <div class="product-detailspage-frame895">
             <img
-              src="."
+              src={image57}
               alt="image572514"
               class="product-detailspage-image57"
             />
           </div>
           <div class="product-detailspage-frame896">
             <img
-              src="."
+              src={image59}
               alt="image582514"
               class="product-detailspage-image58"
             />
           </div>
           <div class="product-detailspage-frame897">
             <img
-              src="."
+              src={image61}
               alt="image612514"
               class="product-detailspage-image61"
             />
           </div>
           <div class="product-detailspage-frame919">
             <img
-              src="."
+              src={image58}
               alt="image592514"
               class="product-detailspage-image59"
             />
@@ -116,13 +138,13 @@ const ProductsDetails = () => {
                   class="product-detailspage-ellipse9"
                 />
                 <img
-                  src="."
+                  src={blue}
                   alt="Ellipse10I251"
                   class="product-detailspage-ellipse10"
                 />
               </div>
               <img
-                src="."
+                src={red}
                 alt="Ellipse8I251"
                 class="product-detailspage-ellipse8"
               />
@@ -170,7 +192,7 @@ const ProductsDetails = () => {
           <div class="product-detailspage-frame926">
             <div class="product-detailspage-frame906">
               <img
-                src="public/external/iconminus2575-sib9.svg"
+                src={minus}
                 alt="iconminus2575"
                 class="product-detailspage-iconminus"
               />
@@ -180,7 +202,7 @@ const ProductsDetails = () => {
             </div>
             <div class="product-detailspage-frame907">
               <img
-                src="public/external/iconplus2575-smnf.svg"
+                src={plus}
                 alt="iconplus2575"
                 class="product-detailspage-iconplus"
               />
@@ -193,7 +215,7 @@ const ProductsDetails = () => {
           </button>
           <div class="product-detailspage-frame904">
             <img
-              src="public/external/wishlist2514-4usg.svg"
+              src={heart}
               alt="Wishlist2514"
               class="product-detailspage-wishlist1"
             />
@@ -208,7 +230,7 @@ const ProductsDetails = () => {
             </div>
             <div class="product-detailspage-frame915">
               <img
-                src="public/external/icondelivery2614-paw7.svg"
+                src={delivery}
                 alt="icondelivery2614"
                 class="product-detailspage-icondelivery"
               />
@@ -223,7 +245,7 @@ const ProductsDetails = () => {
             </div>
             <div class="product-detailspage-frame914">
               <img
-                src="public/external/iconreturn2614-3yq9.svg"
+                src={returnIcon}
                 alt="Iconreturn2614"
                 class="product-detailspage-iconreturn"
               />
@@ -244,7 +266,7 @@ const ProductsDetails = () => {
             <div class="product-detailspage-frame923">
               <div class="product-detailspage-category-rectangle">
                 <img
-                  src="."
+                  src={related}
                   alt="Rectangle17I261"
                   class="product-detailspage-rectangle17"
                 />
@@ -263,42 +285,42 @@ const ProductsDetails = () => {
                   </div>
                   <div class="product-detailspage-frame575">
                     <div class="product-detailspage-fill-heart">
-                      <img
-                        src="."
+                      {/* <img
+                        src={heart}
                         alt="Ellipse12I261"
                         class="product-detailspage-ellipse12"
-                      />
+                      /> */}
                       <img
-                        src="public/external/heartsmalli261-v4jo.svg"
+                        src={heart}
                         alt="heartsmallI261"
                         class="product-detailspage-heartsmall"
                       />
                     </div>
                     <div class="product-detailspage-fill-eye">
-                      <img
-                        src="."
+                      {/* <img
+                        src={eye}
                         alt="Ellipse13I261"
                         class="product-detailspage-ellipse13"
-                      />
+                      /> */}
                       <div class="product-detailspage-quick-view">
                         <div class="product-detailspage-group">
                           <img
-                            src="public/external/vectori261-a1w.svg"
+                            src={eye}
                             alt="VectorI261"
                             class="product-detailspage-vector"
                           />
-                          <img
+                          {/* <img
                             src="public/external/vectori261-8g6m.svg"
                             alt="VectorI261"
                             class="product-detailspage-vector01"
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="product-detailspage-frame611">
                     <img
-                      src="."
+                      src={product1}
                       alt="g922500x5001I261"
                       class="product-detailspage-g922500x5001"
                     />
@@ -345,42 +367,42 @@ const ProductsDetails = () => {
                   </span>
                   <div class="product-detailspage-frame5751">
                     <div class="product-detailspage-fill-heart1">
-                      <img
-                        src="."
+                      {/* <img
+                        src={heart}
                         alt="Ellipse12I261"
                         class="product-detailspage-ellipse121"
-                      />
+                      /> */}
                       <img
-                        src="public/external/heartsmalli261-zyts.svg"
+                        src={heart}
                         alt="heartsmallI261"
                         class="product-detailspage-heartsmall1"
                       />
                     </div>
                     <div class="product-detailspage-fill-eye1">
-                      <img
-                        src="."
+                      {/* <img
+                        src={eye}
                         alt="Ellipse13I261"
                         class="product-detailspage-ellipse131"
-                      />
+                      /> */}
                       <div class="product-detailspage-quick-view1">
                         <div class="product-detailspage-group1">
                           <img
-                            src="public/external/vectori261-ccn.svg"
+                            src={eye}
                             alt="VectorI261"
                             class="product-detailspage-vector02"
                           />
-                          <img
+                          {/* <img
                             src="public/external/vectori261-yr1b.svg"
                             alt="VectorI261"
                             class="product-detailspage-vector03"
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="product-detailspage-frame612">
                     <img
-                      src="."
+                      src={product2}
                       alt="ak90001500x5001I261"
                       class="product-detailspage-ak90001500x5001"
                     />
@@ -419,42 +441,42 @@ const ProductsDetails = () => {
                   </div>
                   <div class="product-detailspage-frame5752">
                     <div class="product-detailspage-fill-heart2">
-                      <img
-                        src="."
+                      {/* <img
+                        src={heart}
                         alt="Ellipse12I261"
                         class="product-detailspage-ellipse122"
-                      />
+                      /> */}
                       <img
-                        src="public/external/heartsmalli261-l7fl.svg"
+                        src={heart}
                         alt="heartsmallI261"
                         class="product-detailspage-heartsmall2"
                       />
                     </div>
                     <div class="product-detailspage-fill-eye2">
-                      <img
-                        src="."
+                      {/* <img
+                        src={eye}
                         alt="Ellipse13I261"
                         class="product-detailspage-ellipse132"
-                      />
+                      /> */}
                       <div class="product-detailspage-quick-view2">
                         <div class="product-detailspage-group2">
                           <img
-                            src="public/external/vectori261-54dr.svg"
+                            src={eye}
                             alt="VectorI261"
                             class="product-detailspage-vector04"
                           />
-                          <img
+                          {/* <img
                             src="public/external/vectori261-00em.svg"
                             alt="VectorI261"
                             class="product-detailspage-vector05"
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="product-detailspage-frame613">
                     <img
-                      src="."
+                      src={product3}
                       alt="g27cq4500x5001I261"
                       class="product-detailspage-g27cq4500x5001"
                     />
@@ -488,42 +510,42 @@ const ProductsDetails = () => {
                 <div class="product-detailspage-cart1">
                   <div class="product-detailspage-frame568">
                     <div class="product-detailspage-fill-heart3">
-                      <img
-                        src="."
+                      {/* <img
+                        src={heart}
                         alt="Ellipse12I261"
                         class="product-detailspage-ellipse123"
-                      />
+                      /> */}
                       <img
-                        src="public/external/heartsmalli261-3gcj.svg"
+                        src={heart}
                         alt="heartsmallI261"
                         class="product-detailspage-heartsmall3"
                       />
                     </div>
                     <div class="product-detailspage-fill-eye3">
-                      <img
-                        src="."
+                      {/* <img
+                        src={eye}
                         alt="Ellipse13I261"
                         class="product-detailspage-ellipse133"
-                      />
+                      /> */}
                       <div class="product-detailspage-quick-view3">
                         <div class="product-detailspage-group3">
                           <img
-                            src="public/external/vectori261-cyq9.svg"
+                            src={eye}
                             alt="VectorI261"
                             class="product-detailspage-vector06"
                           />
-                          <img
+                          {/* <img
                             src="public/external/vectori261-n28.svg"
                             alt="VectorI261"
                             class="product-detailspage-vector07"
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="product-detailspage-frame610">
                     <img
-                      src="."
+                      src={product4}
                       alt="gammaxxl240argb1500x5001I261"
                       class="product-detailspage-gammaxxl240argb1500x5001"
                     />

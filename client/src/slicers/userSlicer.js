@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import axios from "axios"
-
 
 const initialState = {
-    user: null,
+    user: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null,
+    userToken: localStorage.getItem('userToken') ? JSON.parse(localStorage.getItem('userToken')) : null,
 }
 
 export const userSlicer = createSlice({
@@ -12,24 +11,15 @@ export const userSlicer = createSlice({
     reducers: {
         setUser: (state, action) => {
             state.user = action.payload
+            localStorage.setItem('userInfo', JSON.stringify(action.payload))
         },
         logout: (state) => {
             state.user = null
+            localStorage.removeItem('userInfo')
+            localStorage.removeItem('userToken')
         },
-        registerUser: async (state, action) => {
-            console.log(action.payload);
-            try {
-                const response = await axios.post("http://localhost:5000/api/register", action.payload, state)
-                console.log(response.data);
-                state.user = response.data.result
-                console.log(state.user);
-                // window.location.href = "/login"
-            } catch (error) {
-                console.log(error);
-            }
-        }
     }
 })
 
-export const { setUser, logout, registerUser } = userSlicer.actions
+export const { setUser, logout } = userSlicer.actions
 export default userSlicer.reducer

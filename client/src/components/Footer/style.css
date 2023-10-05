@@ -110,6 +110,7 @@
     position: relative;
     white-space: nowrap;
     width: fit-content;
+    cursor: pointer;
   }
   
   .footer .text-wrapper-3 {
@@ -121,8 +122,11 @@
     letter-spacing: var(--title-16px-regular-letter-spacing);
     line-height: var(--title-16px-regular-line-height);
     position: relative;
+    display: flex;
+    gap: 0.2rem;
     white-space: nowrap;
     width: fit-content;
+    cursor: pointer;
   }
   
   .footer .send-mail-instance {
@@ -420,4 +424,16 @@
   }
   .footer img{
     cursor: pointer;
+  }
+
+  .text-wrapper-3 p{
+    margin: 0;
+  }
+
+  .footer hr{
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    color: white;
+    opacity: 0.09;
   }

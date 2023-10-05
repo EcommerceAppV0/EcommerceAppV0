@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
+import { useSelector } from "react-redux";
+const bcrypt = require("bcrypt");
 
-const  Account = ()=> {
+const Account = () => {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    adress: "",
+  });
+  const [password, setPassword] = useState({ old: "", new: "", confirm: "" });
+  const { user } = useSelector((state) => state.value);
+  
+  const correctOldPassword = bcrypt.compare()
+
+
   return (
     <div className="Account-container">
       <div className="top-div">
@@ -38,26 +53,44 @@ const  Account = ()=> {
           <div className="account-first-info">
             <div className="input-div">
               <label>First Name</label>
-              <input type="text" placeholder="Md"/>
+              <input
+                type="text"
+                placeholder="Md"
+                onChange={(e) =>
+                  setForm({ ...form, firstName: e.target.value })
+                }
+              />
             </div>
             <div className="input-div">
               <label>Last Name</label>
-              <input type="text" placeholder="Rimel"/>
+              <input
+                type="text"
+                placeholder="Rimel"
+                onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+              />
             </div>
             <div className="input-div">
               <label>Email</label>
-              <input type="email" placeholder="rimel1111@gmail.com"/>
+              <input
+                type="email"
+                placeholder="rimel1111@gmail.com"
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+              />
             </div>
             <div className="input-div">
               <label>Adress</label>
-              <input type="text" placeholder="Kingstopn, 5236, United State"/>
+              <input
+                type="text"
+                placeholder="Kingstopn, 5236, United State"
+                onChange={(e) => setForm({ ...form, adress: e.target.value })}
+              />
             </div>
           </div>
           <div className="account-password">
             <label>Password Changes</label>
-            <input type="password" placeholder="Current Password"/>
-            <input type="password" placeholder="New Password"/>
-            <input type="password" placeholder="Confirm New Password"/>
+            <input type="password" placeholder="Current Password" />
+            <input type="password" placeholder="New Password" />
+            <input type="password" placeholder="Confirm New Password" />
           </div>
           <div className="account-buttons">
             <button id="cancel">Cancel</button>
@@ -67,6 +100,6 @@ const  Account = ()=> {
       </div>
     </div>
   );
-}
+};
 
 export default Account;

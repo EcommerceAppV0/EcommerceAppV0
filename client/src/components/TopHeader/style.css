@@ -1,8 +1,11 @@
+/* there was erroe i fixed it  */
+
 .top-header {
   display: flex;
   background-color: black;
   height: 3rem;
   width: 100%;
+  padding-top: 1rem;
   color: #FAFAFA;
   align-items: center;
   justify-content: space-around;
@@ -11,7 +14,7 @@
 
 .frame {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   font-family: Poppins;
   font-size: 0.875rem;
@@ -22,10 +25,10 @@
   padding-left: 20%;
 }
 
-.frame-2 {
+.frame-2-english {
   /* width: 10px; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 0.3rem;
 
@@ -37,6 +40,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
+  position: relative;
+  height: 100%;
   line-height: 1.5rem;
   text-decoration-line: underline
 }
@@ -44,7 +49,9 @@
 .english {
   font-family: Poppins;
   font-size: 0.875rem;
+  /* display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.3125rem;
+  line-height: 1.3125rem; */
 }

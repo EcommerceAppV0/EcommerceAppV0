@@ -2,6 +2,7 @@ import React from 'react';
 import Navabr from './components/Nabar/Navabr';
 import TopHeader from './components/TopHeader/TopHeader';
 import SignUp from './components/SignUp/SignUp';
+import ProductsDetails from './components/ProductsDetails/ProductsDetails';
 import Login from "./components/Login/Login";
 import Error from './components/Error/Error';
 import Contact from './components/Contact/Contact';
@@ -24,9 +25,19 @@ function App() {
     <div >
       {/* This to compnents will be for all the app  */}
       <TopHeader />
-      <Navabr />
+      <Navabr /> 
 
       {/* heree it will be the routers */}
+      {/* <SignUp /> */}
+      {/* <ProductsDetails/> */}
+
+      
+      {/* <SignUp />
+      <Login />
+      <Error /> */}
+
+
+
 
 
       {/* we will fix the private routers depending on the state  */}
@@ -40,6 +51,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/error' element={<Error />} />
         <Route path='/about' element={<About />} />
+        <Route path='/productdetails' element={<ProductsDetails/>}/>
+        {/* <Route/>  */}
         <Route path='/account' element={<Account />} />
         <Route path='/*' element={<Error />} />
         <Route path='/cart' element={<Cart />} />
@@ -50,7 +63,7 @@ function App() {
       </Routes>
 
       {/* the footer will be the last compnetnts for all  */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

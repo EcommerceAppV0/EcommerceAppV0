@@ -32,7 +32,7 @@ function App() {
       <Routes>
         {/* this will be for homepage */}
         {/* <Route path='/' element={<Error />} /> */}
-        <Route path="/" element={<Login />} />        //! this will show the login when the website is loaded instead of the error page - Amine
+        <Route path="/" element={<Login />} />        //! this will show the login when the website is loaded instead of the error page - Amine !//it will be the homepage tomrrow
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/contact' element={<Contact />} />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./style.css"
+import Spinner from 'react-bootstrap/Spinner';
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
 // import {  useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -70,7 +71,17 @@ const Login = () => {
                         <div>Forget Password?</div>
                     </div>
                     {/* here we will add some toast for loading */}
-                    {isLoading && <h1>👨laoding</h1>}
+                    {isLoading &&
+                        <div style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "center" }}>
+                            <Spinner animation="border" variant="danger" />
+                            <Spinner animation="border" variant="warning" />
+                            <Spinner animation="border" variant="info" />
+                            <Spinner animation="border" variant="dark" />
+                            <h1> loading..</h1>
+                        </div>
+                    }
+
+                    {/* after we will add some Toasts for Ux Thank you  */}
                     {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>

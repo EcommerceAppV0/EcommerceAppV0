@@ -1,0 +1,347 @@
+.all-of-all {
+    width: 100%;
+    /* background-color: red; */
+    height: 600vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 10rem;
+}
+
+.wrap1 {
+    /* background-color: blueviolet; */
+    width: 100%;
+    /* height: 200rem; */
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+
+}
+
+.cateogry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 30rem;
+    /* height: 100rem; */
+    /* background-color: yellow; */
+    color: #000;
+    text-align: center;
+
+    /* Title/16PX Regular */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 150% */
+
+}
+
+
+
+
+.carousel img {
+    position: relative;
+    left: 35%;
+    top: 5rem;
+    width: 31rem !important;
+    height: 22rem;
+
+
+    /* width: 100% !important; */
+    /* height: 100%!important; */
+
+}
+
+/* .carousel-item{
+    width: 100%!important;
+    height: 100%!important;
+} */
+.carousel-caption {
+    color: white !important;
+}
+
+.carousel-control-next-icon {
+    color: white !important;
+    opacity: 0.5 !important;
+}
+
+
+.wrap2 {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* later changed */
+    /* height: 10%; */
+}
+
+.flash-sales-today-timer {
+    display: flex;
+    gap: 5.4375rem;
+    height: 7rem;
+    /* background-color: beige; */
+}
+
+.flash-sales {
+    /* background-color: rosybrown; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* flex: 3; */
+    align-items: flex-start;
+}
+
+.timer {
+    /* background-color: aqua; */
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.flash-text {
+    color: #000;
+
+    /* Heading/36PX SemiBold */
+    font-family: Inter;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem;
+    /* 133.333% */
+    letter-spacing: 0.09rem;
+}
+
+.timer-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 2rem;
+    gap: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem;
+    letter-spacing: 0.08rem;
+}
+
+.cards {
+    overflow-x: scroll;
+}
+
+.card-container {
+
+    width: fit-content;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-images {
+    width: 16.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15.625rem;
+    border-radius: 0.25rem;
+    background: #F5F5F5;
+    position: relative;
+}
+
+.card-images img {
+
+    object-fit: contain;
+    width: 10.75rem;
+    height: 9.5rem;
+}
+
+.money {
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.promtion-div-wish {
+    padding: 1rem;
+    display: flex;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+}
+
+.promtion-div-wish button {
+    border: none;
+    display: inline-flex;
+    padding: 0.25rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    background: #DB4444;
+    color: #FAFAFA;
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+
+
+
+
+.fa-heart:hover {
+    color: #DB4444 !important;
+    cursor: pointer;
+}
+
+.fa-eye:hover {
+    color: green !important;
+    cursor: pointer;
+}
+
+.fa-star:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.4);
+}
+
+.viewallbtn button {
+    display: inline-flex;
+    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: #FAFAFA;
+    font-family: Poppins;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background: #DB4444;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.colors-red {
+    color: #DB4444;
+
+    /* Title/16PX Semibold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+    /* 125% */
+}
+
+
+
+.category-div-sub {
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    display: flex;
+    width: 10.625rem;
+    height: 9.0625rem;
+    padding: 1.5625rem 3.5rem 1.5rem 3.4375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+
+.ourProducts {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.enahce-music {
+    color: #FAFAFA;
+
+    /* Heading/48PX SemiBold */
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.75rem;
+    /* 125% */
+    letter-spacing: 0.12rem;
+}
+
+.green-Cteggories {
+    color: #0F6;
+
+    /* Title/16PX Semibold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+    /* 125% */
+}
+
+.byNow {
+    display: inline-flex;
+    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    background: var(--Button1, #0F6);
+    color: var(--Text, #FAFAFA);
+
+    /* Title/16PX Medium */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.circle-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+    align-items: center;
+    padding: 0.4rem;
+    color: var(--Text2, #000);
+
+    /* Title/16PX Semibold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+
+    /* 125% */
+}
+
+.newarrival-Container {
+    width: 100%;
+    /* background-color: red; */
+    gap: 2rem;
+    height: 40rem;
+    display: flex;
+}

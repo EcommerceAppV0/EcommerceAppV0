@@ -5,11 +5,18 @@ import i14 from "../../assets/images/i14.png"
 import iPhone14 from "../../assets/images/iPhone-14.png"
 import iPhone142 from "../../assets/images/iPhone-14-2.png"
 import manette from "../../assets/images/manette.png"
+import Jbl from "../../assets/images/JBL.png"
+import ps5 from "../../assets/images/ps5-slim.png"
+import attractiveWoman from "../../assets/images/attractive-woman.png"
+import smalJbl from "../../assets/images/smalJbl.png"
+import gucci from "../../assets/images/gucci.png"
+
+import CardContainer from '../CardConatiner/CardContainer';
 
 const HomePage = () => {
     return (
         <div className='all-of-all'>
-            <div className='wrap1'>
+            <div className='firstView wrap1'>
                 <div className='cateogry'>
                     <span>Women' s fashion</span>
                     <span>Men 's fashion </span>
@@ -46,7 +53,7 @@ const HomePage = () => {
 
 
             </div>
-            <div className='wrap2'>
+            <div className='flashSales wrap2'>
                 <div className='flash-sales-today-timer'>
                     <div className='flash-sales'>
                         <div className='d-flex gap-3 align-items-center colors-red'>
@@ -104,652 +111,18 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className='cards d-flex gap-4'>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='card-container'>
-                        <div className='card-images'>
-                            <div className='promtion-div-wish'>
-                                <button>-40%</button>
-                                <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
-                            </div>
-                            <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
-
-                            <img src={manette} />
-                        </div>
-                        <div className='card-infos d-flex flex-column gap-2'>
-                            <span>HAVIT HV-G92 Gamepad</span>
-                            <div className='d-flex gap-3 money'>
-                                <span style={{ color: "#DB4444" }} >$120</span>
-                                <span style={{ color: "#000", textDecorationLine: " line-through" }} >$160</span>
-                            </div>
-                            <div className='d-flex gap-3'>
-                                <div className='d-flex gap-2 align-items-center'>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    <i className="fa-solid fa-star fa-sm" style={{ color: " #f0f40b" }}></i>
-                                    (88)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
+                    <CardContainer ispromo={true} />
                 </div>
-                <div className='d-flex align-items-center justify-content-center viewallbtn'>
+                <div className='viewallbtn d-flex align-items-center justify-content-center'>
                     <button>View All Products</button>
                 </div>
                 <hr style={{
@@ -758,7 +131,7 @@ const HomePage = () => {
                     background: "#000"
                 }} />
             </div>
-            <div className='wrap3 d-flex flex-column gap-5  '>
+            <div className='browseByCategory wrap3 d-flex flex-column gap-5  '>
                 <div className='flash-sales'>
                     <div className='d-flex gap-3 align-items-center colors-red'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 20 40" fill="none">
@@ -885,7 +258,7 @@ const HomePage = () => {
                     background: "#000"
                 }} />
             </div>
-            <div className='wrap2'>
+            <div className='bestSelling Prod wrap2 mb-5'>
                 <div className='flash-sales'>
                     <div className='d-flex gap-3 align-items-center colors-red'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 20 40" fill="none">
@@ -895,7 +268,123 @@ const HomePage = () => {
                     </div>
                     <span className='flash-text'>Best Selling Products</span>
                 </div>
+                <div className='d-flex gap-4'>
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                </div>
             </div>
+            <div className='baffle-images here mb-5 d-flex align-items-center p-4' style={{ height: "30rem", backgroundColor: "black" }}>
+                <div className='d-flex flex-column gap-5 p-4' style={{ flex: 1 }}>
+                    <span className='green-Cteggories'>Categories</span>
+                    <span className='enahce-music'>Enhance Your Music Experience</span>
+
+                    <div className='d-flex gap-4'>
+                        <div className='oneCircle'>
+                            <div className='circle-text'>
+                                <span >23</span>
+                                <span style={{ fontWeight: "400" }}>Hours</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+                                <circle cx="31" cy="31" r="31" fill="white" />
+                            </svg>
+                        </div>
+                        <div className='oneCircle'>
+                            <div className='circle-text'>
+                                <span >23</span>
+                                <span style={{ fontWeight: "400" }}>Hours</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+                                <circle cx="31" cy="31" r="31" fill="white" />
+                            </svg>
+                        </div>
+                        <div className='oneCircle'>
+                            <div className='circle-text'>
+                                <span >23</span>
+                                <span style={{ fontWeight: "400" }}>Hours</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+                                <circle cx="31" cy="31" r="31" fill="white" />
+                            </svg>
+                        </div>
+                        <div className='oneCircle'>
+                            <div className='circle-text'>
+                                <span >5</span>
+                                <span style={{ fontWeight: "400" }}>Days</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+                                <circle cx="31" cy="31" r="31" fill="white" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div>
+                        <button className='byNow'>Buy Now!</button>
+                    </div>
+
+                </div>
+                <div className='d-flex align-items-center ' style={{ flex: 1, height: "100%", width: "100%" }}>
+                    <img className='baffle-img' style={{ width: "100%", height: "80%", objectFit: "conatin" }} src={Jbl} />
+                </div>
+
+            </div>
+            <div className='exploreOurProd wrap2'>
+                <div className='flash-sales'>
+                    <div className='d-flex gap-3 align-items-center colors-red'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 20 40" fill="none">
+                            <rect width="20" height="40" rx="4" fill="#DB4444" />
+                        </svg>
+                        <span>Our Products</span>
+                    </div>
+                    <span className='flash-text'>Explore Our Products</span>
+                </div>
+                <div className='ourProducts d-grid'>
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                    <CardContainer ispromo={false} />
+                </div>
+                <div className='viewallbtn d-flex align-items-center justify-content-center'>
+                    <button>View All Products</button>
+                </div>
+            </div>
+            <div className='newAriivalPage wrap2'>
+                <div className='flash-sales'>
+                    <div className='d-flex gap-3 align-items-center colors-red'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 20 40" fill="none">
+                            <rect width="20" height="40" rx="4" fill="#DB4444" />
+                        </svg>
+                        <span>Featured</span>
+                    </div>
+                    <span className='flash-text'>New Arrival</span>
+                </div>
+                <div className='newarrival-Container'>
+                    <div className='d-flex' style={{ flex: "1", background: "black", width: "100%", height: "100%" }}>
+                        <img style={{ width: "100%", height: "100%" }} src={ps5} />
+                    </div>
+                    <div style={{ flex: "1", display: "flex", flexDirection: "column", gap: "2rem" }}>
+                        <div style={{ flex: "1", width: "100%", height: "100%" }} >
+                            <img style={{ width: "100%", height: "100%", objectFit: "contain" }} src={attractiveWoman} />
+                        </div>
+                        <div style={{ flex: "1", display: "flex", gap: "2rem" }}>
+
+                            <div style={{ flex: "1", width: "100%", backgroundColor: "black", height: "100%", display: "flex", justifyContent: "center" }}>
+                                <img style={{ objectFit: "cover" }} src={smalJbl} />
+                            </div>
+                            <div style={{ flex: "1", backgroundColor: "black", width: "100%", height: "100%", display: "flex", justifyContent: "center" }}>
+                                <img style={{ objectFit: "cover" }} src={gucci} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     )
 }

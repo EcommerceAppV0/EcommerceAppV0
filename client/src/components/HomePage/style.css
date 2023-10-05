@@ -138,7 +138,7 @@
 
 .card-container {
 
-    /* width: 17rem; */
+    width: fit-content;
     height: 23rem;
     display: flex;
     flex-direction: column;
@@ -265,4 +265,83 @@
     justify-content: center;
     align-items: flex-end;
     gap: 1rem;
+}
+
+
+.ourProducts {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.enahce-music {
+    color: #FAFAFA;
+
+    /* Heading/48PX SemiBold */
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.75rem;
+    /* 125% */
+    letter-spacing: 0.12rem;
+}
+
+.green-Cteggories {
+    color: #0F6;
+
+    /* Title/16PX Semibold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+    /* 125% */
+}
+
+.byNow {
+    display: inline-flex;
+    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    background: var(--Button1, #0F6);
+    color: var(--Text, #FAFAFA);
+
+    /* Title/16PX Medium */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.circle-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+    align-items: center;
+    padding: 0.4rem;
+    color: var(--Text2, #000);
+
+    /* Title/16PX Semibold */
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+
+    /* 125% */
+}
+
+.newarrival-Container {
+    width: 100%;
+    /* background-color: red; */
+    gap: 2rem;
+    height: 40rem;
+    display: flex;
 }

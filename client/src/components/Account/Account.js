@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useSelector } from "react-redux";
-// const bcrypt = require("bcrypt");
 
 const Account = () => {
   const [form, setForm] = useState({
@@ -14,7 +13,6 @@ const Account = () => {
   const [password, setPassword] = useState({ old: "", new: "", confirm: "" });
   const { user } = useSelector((state) => state.value);
   
-  // const correctOldPassword = bcrypt.compare()
 
 
   return (

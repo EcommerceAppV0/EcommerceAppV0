@@ -28,7 +28,7 @@ function App() {
 
       {/* heree it will be the routers */}
       {/* <SignUp /> */}
-      <ProductsDetails/>
+      {/* <ProductsDetails/> */}
 
       
       {/* <SignUp />
@@ -46,8 +46,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/error' element={<Error />} />
         <Route path='/about' element={<About />} />
-        {/* <Route path=''/>
-        <Route/> */}
+        <Route path='/productdetails' element={<ProductsDetails/>}/>
+        {/* <Route/>  */}
       </Routes>
 
       {/* the footer will be the last compnetnts for all  */}

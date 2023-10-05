@@ -72,12 +72,15 @@ const Login = () => {
                     {/* here we will add some toast for loading */}
                     {isLoading &&
                         <div style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "center" }}>
-                            <Spinner animation="border" />
+                            <Spinner animation="border" variant="danger" />
+                            <Spinner animation="border" variant="warning" />
+                            <Spinner animation="border" variant="info" />
+                            <Spinner animation="border" variant="dark" />
                             <h1> loading..</h1>
                         </div>
                     }
 
-
+                    {/* after we will add some Toasts for Ux Thank you  */}
                     {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>

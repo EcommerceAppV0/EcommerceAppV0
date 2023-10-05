@@ -1,586 +1,327 @@
 import React from 'react'
 import "./style.css"
-import delivery from "../../assets/images/delivery.png"
-import returnIcon from "../../assets/images/icon-return.png"
-import heart from "../../assets/images/heart.png"
-import eye from "../../assets/images/eye.png"
-import image57 from "../../assets/images/image-57.png"
-import image58 from "../../assets/images/image-58.png"
-import image59 from "../../assets/images/image-59.png"
-import image61 from "../../assets/images/image-61.png"
-import image63 from "../../assets/images/image-63.png"
-import product1 from "../../assets/images/product-1.png"
-import product2 from "../../assets/images/product-2.png"
-import product3 from "../../assets/images/product-3.png"
-import product4 from "../../assets/images/product-4.png"
-import star from "../../assets/images/star.png"
-import halfstar from "../../assets/images/half-star.png"
-import plus from "../../assets/images/icon-plus.png"
-import minus from "../../assets/images/icon-minus.png"
-import blue from "../../assets/images/blue.png"
-import red from "../../assets/images/red.png"
-import related from "../../assets/images/related.png"
+// import { Button } from "@mui/material"
+
+// import delivery from "../../assets/images/delivery.png"
+// import returnIcon from "../../assets/images/icon-return.png"
+// import heart from "../../assets/images/heart.png"
+// import eye from "../../assets/images/eye.png"
+// import image57 from "../../assets/images/image-57.png"
+// import image58 from "../../assets/images/image-58.png"
+// import image59 from "../../assets/images/image-59.png"
+// import image61 from "../../assets/images/image-61.png"
+// import image63 from "../../assets/images/image-63.png"
+// import product1 from "../../assets/images/product-1.png"
+// import product2 from "../../assets/images/product-2.png"
+// import product3 from "../../assets/images/product-3.png"
+// import product4 from "../../assets/images/product-4.png"
+// import star from "../../assets/images/star.png"
+// import halfstar from "../../assets/images/half-star.png"
+// import plus from "../../assets/images/icon-plus.png"
+// import minus from "../../assets/images/icon-minus.png"
+// import blue from "../../assets/images/blue.png"
+// import red from "../../assets/images/red.png"
+// import related from "../../assets/images/related.png"
+import start from "../../assets/images/details/vector.svg"
+import starthalf from "../../assets/images/details/starhalffilled.svg"
+import image1 from "../../assets/images/details/image-63@2x.png"
+import image2 from "../../assets/images/details/image-57@2x.png"
+import image3 from "../../assets/images/details/image-58@2x.png"
+import image4 from "../../assets/images/details/image-61@2x.png"
+import image5 from "../../assets/images/details/image-59@2x.png"
+// import line13 from "../../assets/images/details/line-13.svg"
+// import line14 from "../../assets/images/details/line-14.svg"
+import vector1 from "../../assets/images/details/vector1.svg"
+import groupe10 from "../../assets/images/details/group-1000005935.svg"
+import iconminus from "../../assets/images/details/icon-minus.png"
+import frame907 from "../../assets/images/details/frame-907.svg"
+import frame904 from "../../assets/images/details/frame-904.svg"
+import underline1 from "../../assets/images/details/underline1.svg"
+import icondelivery from "../../assets/images/details/icondelivery.svg"
+import iconreturn from "../../assets/images/details/iconreturn.svg"
+import iconheart from "../../assets/images/details/fill-heart.svg"
+import iconeye from "../../assets/images/details/fill-eye.svg"
+import g92 from "../../assets/images/details/g922500x500-1@2x.png"
+import ak90 from "../../assets/images/details/ak90001500x500-1@2x.png"
+import g27 from "../../assets/images/details/g27cq4500x500-1@2x.png"
+import gammax from "../../assets/images/details/gammaxxl240argb1500x500-1@2x.png"
 
 
 const ProductsDetails = () => {
     return (
        
-        <div class="product-detailspage-container">
-        <div class="product-detailspage-product-detailspage">
-    
-          <div class="product-detailspage-line3">
-            <img
-              src="public/external/line3i250-5b0b.svg"
-              alt="Line3I250"
-              class="product-detailspage-line31"
-            />
-          <div>
-          <div class="product-detailspage-roadmap">
-            <span class="product-detailspage-text018 Title14PXRegular">
-              <span>Account</span>
-            </span>
-            <img
-              src="public/external/line13i251-8qm7.svg"
-              alt="Line13I251"
-              class="product-detailspage-line13"
-            />
-            <span class="product-detailspage-text020 Title14PXRegular">
-              <span>Gaming</span>
-            </span>
-            <img
-              src="public/external/line16i251-ce2k.svg"
-              alt="Line16I251"
-              class="product-detailspage-line16"
-            />
-            <span class="product-detailspage-text022 Title14PXRegular">
-              <span>Havic HV G-92 Gamepad</span>
-            </span>
+      <div className="product-details-page">
+      <img className="product-details-page-child" alt="" src="/line-3.svg" />
+      <div className="roadmap">
+        <div className="account">Account</div>
+        <img className="roadmap-child" alt="" src="/line-13.svg" />
+        <div className="account">Gaming</div>
+        <img className="roadmap-item" alt="" src="/line-14.svg" />
+        <div className="nothing1">Product</div>
+        <img className="roadmap-item" alt="" src="/line-14.svg" />
+        <div className="nothing1">View Cart</div>
+        <img className="roadmap-child" alt="" src="/line-13.svg" />
+        <div className="english">Havic HV G-92 Gamepad</div>
+      </div>
+      <div className="image-63-wrapper">
+        <img className="image-63-icon" alt="" src={image1} />
+      </div>
+      <div className="image-57-wrapper">
+        <img className="image-57-icon" alt="" src={image2} />
+      </div>
+      <div className="image-58-wrapper">
+        <img className="image-58-icon" alt="" src={image3} />
+      </div>
+      <div className="image-61-wrapper">
+        <img className="image-61-icon" alt="" src={image4} />
+      </div>
+      <div className="image-59-wrapper">
+        <img className="image-59-icon" alt="" src={image5} />
+      </div>
+      <div className="havic-hv-g-92">Havic HV G-92 Gamepad</div>
+      <div className="div">$192.00</div>
+      <div className="frame-group">
+        <div className="four-star-parent">
+          <div className="four-star">
+            <img className="vector-icon" alt="" src={start} />
+            <img className="vector-icon" alt="" src={start} />
+            <img className="vector-icon" alt="" src={start} />
+            <img className="vector-icon" alt="" src={start} />
+            <img className="vector-icon4" alt="" src={vector1} />
           </div>
-          <div class="product-detailspage-frame894">
-            <img
-              src={image63}
-              alt="image632514"
-              class="product-detailspage-image63"
-            />
+          <div className="account">(150 Reviews)</div>
+        </div>
+        <div className="line-parent">
+          <div className="frame-child" />
+          <div className="in-stock">In Stock</div>
+        </div>
+      </div>
+      <div className="playstation-5-controller">{`PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.`}</div>
+      <div className="colours-parent">
+        <div className="colours">Colours:</div>
+        <div className="four-star-parent">
+          <img
+            className="colour-chnage-child"
+            alt=""
+            src={groupe10}
+          />
+          <div className="colour-chnage-item" />
+        </div>
+      </div>
+      <div className="size-parent">
+        <div className="colours">Size:</div>
+        <div className="frame-container">
+          <div className="xs-wrapper">
+            <span className="xs">XS</span>
+            
           </div>
-          <div class="product-detailspage-frame895">
-            <img
-              src={image57}
-              alt="image572514"
-              class="product-detailspage-image57"
-            />
+          <div className="xs-wrapper">
+            <span className="s">S</span>
           </div>
-          <div class="product-detailspage-frame896">
-            <img
-              src={image59}
-              alt="image582514"
-              class="product-detailspage-image58"
-            />
+          <div className="m-wrapper">
+            <span className="m">M</span>
           </div>
-          <div class="product-detailspage-frame897">
-            <img
-              src={image61}
-              alt="image612514"
-              class="product-detailspage-image61"
-            />
+          <div className="xs-wrapper">
+            <span className="l">L</span>
           </div>
-          <div class="product-detailspage-frame919">
-            <img
-              src={image58}
-              alt="image592514"
-              class="product-detailspage-image59"
-            />
+          <div className="xs-wrapper">
+            <span className="xl">XL</span>
           </div>
-          <span class="product-detailspage-text024 Heading24PXSemiBold">
-            <span>Havic HV G-92 Gamepad</span>
-          </span>
-          <span class="product-detailspage-text026 Heading24PXRegular">
-            <span>$192.00</span>
-          </span>
-          <div class="product-detailspage-frame922">
-            <div class="product-detailspage-frame920">
-              <img
-                src="public/external/fourstar2514-wbwf.svg"
-                alt="FourStar2514"
-                class="product-detailspage-four-star"
-              />
-              <span class="product-detailspage-text028 Title14PXRegular">
-                <span>(150 Reviews)</span>
-              </span>
+        </div>
+      </div>
+      <img className="underline-icon" alt="" src="/underline.svg" />
+      <div className="frame-div">
+        <div className="icon-minus-wrapper">
+          <div className="icon-minus">
+            <img className="vector-icon5" alt="" src={iconminus}/>
+
+        </div>
+        </div>
+        <div className="wrapper">
+          <div className="div1">2</div>
+        </div>
+        <img className="frame-item" alt="" src={frame907} />
+      </div>
+      <div className="button">
+        <div className="add-to-cart">Buy Now</div>
+      </div>
+      <img className="product-details-page-item" alt="" src={frame904} />
+      <div className="underline-parent">
+        <img className="underline-icon1" alt="" src={underline1} />
+        <div className="icon-delivery-parent">
+          <img className="icon-delivery" alt="" src={icondelivery} />
+          <div className="free-delivery-parent">
+            <div className="add-to-cart">Free Delivery</div>
+            <div className="enter-your-postal">
+              Enter your postal code for Delivery Availability
             </div>
-            <div class="product-detailspage-frame921">
-              <img
-                src="public/external/line172514-7vcs.svg"
-                alt="Line172514"
-                class="product-detailspage-line17"
-              />
-              <span class="product-detailspage-text030 Title14PXRegular">
-                <span>In Stock</span>
-              </span>
+          </div>
+        </div>
+        <div className="icon-return-parent">
+          <img className="icon-delivery" alt="" src={iconreturn} />
+          <div className="free-delivery-parent">
+            <div className="add-to-cart">Return Delivery</div>
+            <div className="free-30-days-container">
+              {`Free 30 Days Delivery Returns. `}
+              <span className="details">Details</span>
             </div>
           </div>
-          <span class="product-detailspage-text032 Title14PXRegular">
-            <span>
-              PlayStation 5 Controller Skin High quality vinyl with air channel
-              adhesive for easy bubble free install &amp; mess free removal
-              Pressure sensitive.
-            </span>
-          </span>
-          <div class="product-detailspage-frame918">
-            <span class="product-detailspage-text034 Heading20PXRegular">
-              <span>Colours:</span>
-            </span>
-            <div class="product-detailspage-colour-chnage">
-              <div class="product-detailspage-group1000005935">
+        </div>
+      </div>
+      <div className="frame-parent1">
+        <div className="category-rectangle-parent">
+          <div className="category-rectangle">
+            <div className="category-rectangle-child" />
+          </div>
+          <div className="related-item">Related Item</div>
+        </div>
+        <div className="cart-with-flat-discount-parent">
+          <div className="cart-with-flat-discount">
+            <div className="discount-percent-parent">
+              <div className="discount-percent">
+                <div className="div2">-40%</div>
+              </div>
+              <div className="fill-heart-parent">
+                <img className="fill-heart-icon" alt="" src={iconheart} />
+                <img className="fill-heart-icon" alt="" src={iconeye} />
+              </div>
+              <div className="g92-2-500x500-1-wrapper">
                 <img
-                  src="."
-                  alt="Ellipse9I251"
-                  class="product-detailspage-ellipse9"
-                />
-                <img
-                  src={blue}
-                  alt="Ellipse10I251"
-                  class="product-detailspage-ellipse10"
-                />
-              </div>
-              <img
-                src={red}
-                alt="Ellipse8I251"
-                class="product-detailspage-ellipse8"
-              />
-            </div>
-          </div>
-          <div class="product-detailspage-frame917">
-            <span class="product-detailspage-text036 Heading20PXRegular">
-              <span>Size:</span>
-            </span>
-            <div class="product-detailspage-frame916">
-              <div class="product-detailspage-frame898">
-                <span class="product-detailspage-text038 Title14PXMedium">
-                  <span>XS</span>
-                </span>
-              </div>
-              <div class="product-detailspage-frame900">
-                <span class="product-detailspage-text040 Title14PXMedium">
-                  S
-                </span>
-              </div>
-              <div class="product-detailspage-frame899">
-                <span class="product-detailspage-text041 Title14PXMedium">
-                  M
-                </span>
-              </div>
-              <div class="product-detailspage-frame901">
-                <span class="product-detailspage-text042 Title14PXMedium">
-                  L
-                </span>
-              </div>
-              <div class="product-detailspage-frame902">
-                <span class="product-detailspage-text043 Title14PXMedium">
-                  <span>XL</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="product-detailspage-under-line">
-            <img
-              src="public/external/line1i251-abne.svg"
-              alt="Line1I251"
-              class="product-detailspage-line1"
-            />
-          </div>
-          <div class="product-detailspage-frame926">
-            <div class="product-detailspage-frame906">
-              <img
-                src={minus}
-                alt="iconminus2575"
-                class="product-detailspage-iconminus"
-              />
-            </div>
-            <div class="product-detailspage-frame908">
-              <span class="product-detailspage-text045 Title20PXMedium">2</span>
-            </div>
-            <div class="product-detailspage-frame907">
-              <img
-                src={plus}
-                alt="iconplus2575"
-                class="product-detailspage-iconplus"
-              />
-            </div>
-          </div>
-          <button class="product-detailspage-button">
-            <span class="product-detailspage-text046 Title16PXMedium">
-              <span>Buy Now</span>
-            </span>
-          </button>
-          <div class="product-detailspage-frame904">
-            <img
-              src={heart}
-              alt="Wishlist2514"
-              class="product-detailspage-wishlist1"
-            />
-          </div>
-          <div class="product-detailspage-frame911">
-            <div class="product-detailspage-under-line1">
-              <img
-                src="public/external/line1i261-sft.svg"
-                alt="Line1I261"
-                class="product-detailspage-line11"
-              />
-            </div>
-            <div class="product-detailspage-frame915">
-              <img
-                src={delivery}
-                alt="icondelivery2614"
-                class="product-detailspage-icondelivery"
-              />
-              <div class="product-detailspage-frame913">
-                <span class="product-detailspage-text048 Title16PXMedium">
-                  <span>Free Delivery</span>
-                </span>
-                <span class="product-detailspage-text050">
-                  <span>Enter your postal code for Delivery Availability</span>
-                </span>
-              </div>
-            </div>
-            <div class="product-detailspage-frame914">
-              <img
-                src={returnIcon}
-                alt="Iconreturn2614"
-                class="product-detailspage-iconreturn"
-              />
-              <div class="product-detailspage-frame912">
-                <span class="product-detailspage-text052 Title16PXMedium">
-                  <span>Return Delivery</span>
-                </span>
-                <span class="product-detailspage-text054">
-                  <span class="product-detailspage-text055">
-                    Free 30 Days Delivery Returns.
-                  </span>
-                  <span>Details</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="product-detailspage-frame925">
-            <div class="product-detailspage-frame923">
-              <div class="product-detailspage-category-rectangle">
-                <img
-                  src={related}
-                  alt="Rectangle17I261"
-                  class="product-detailspage-rectangle17"
+                  className="g92-2-500x500-1-icon"
+                  alt=""
+                  src={g92}
                 />
               </div>
-              <span class="product-detailspage-text057 Title16PXSemibold">
-                <span>Related Item</span>
-              </span>
             </div>
-            <div class="product-detailspage-frame924">
-              <div class="product-detailspage-cart-with-flat-discount">
-                <div class="product-detailspage-frame570">
-                  <div class="product-detailspage-discountpercent">
-                    <span class="product-detailspage-text059 Title12PXRegular">
-                      <span>-40%</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame575">
-                    <div class="product-detailspage-fill-heart">
-                      {/* <img
-                        src={heart}
-                        alt="Ellipse12I261"
-                        class="product-detailspage-ellipse12"
-                      /> */}
-                      <img
-                        src={heart}
-                        alt="heartsmallI261"
-                        class="product-detailspage-heartsmall"
-                      />
-                    </div>
-                    <div class="product-detailspage-fill-eye">
-                      {/* <img
-                        src={eye}
-                        alt="Ellipse13I261"
-                        class="product-detailspage-ellipse13"
-                      /> */}
-                      <div class="product-detailspage-quick-view">
-                        <div class="product-detailspage-group">
-                          <img
-                            src={eye}
-                            alt="VectorI261"
-                            class="product-detailspage-vector"
-                          />
-                          {/* <img
-                            src="public/external/vectori261-8g6m.svg"
-                            alt="VectorI261"
-                            class="product-detailspage-vector01"
-                          /> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-detailspage-frame611">
-                    <img
-                      src={product1}
-                      alt="g922500x5001I261"
-                      class="product-detailspage-g922500x5001"
-                    />
-                  </div>
+            <div className="havit-hv-g92-gamepad-parent">
+              <div className="add-to-cart">HAVIT HV-G92 Gamepad</div>
+              <div className="parent">
+                <div className="add-to-cart">$120</div>
+                <div className="div4">$160</div>
+              </div>
+              <div className="five-star-parent">
+                <div className="four-star">
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
                 </div>
-                <div class="product-detailspage-frame569">
-                  <span class="product-detailspage-text061 Title16PXMedium">
-                    <span>HAVIT HV-G92 Gamepad</span>
-                  </span>
-                  <div class="product-detailspage-frame567">
-                    <span class="product-detailspage-text063 Title16PXMedium">
-                      <span>$120</span>
-                    </span>
-                    <span class="product-detailspage-text065">
-                      <span>$160</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame566">
-                    <img
-                      src="public/external/fivestari261-k2f.svg"
-                      alt="FivestarI261"
-                      class="product-detailspage-fivestar"
-                    />
-                    <span class="product-detailspage-text067 Title14PXSemibold">
-                      <span>(88)</span>
-                    </span>
-                  </div>
-                </div>
+                <div className="div5">(88)</div>
               </div>
-              <div class="product-detailspage-cart-with-flat-discount1">
-                <div class="product-detailspage-frame5701">
-                  <div class="product-detailspage-discountpercent1">
-                    <span class="product-detailspage-text069 Title12PXRegular">
-                      <span>-35%</span>
-                    </span>
-                  </div>
+            </div>
+          </div>
+          <div className="cart-with-flat-discount">
+            <div className="discount-percent-parent">
+              <div className="discount-percent">
+                <div className="div2">-35%</div>
+              </div>
+              <div className="frame-inner" />
+              <div className="add-to-cart1">Add To Cart</div>
+              <div className="fill-heart-parent">
+                <img className="fill-heart-icon" alt="" src={iconheart} />
+                <img className="fill-heart-icon" alt="" src={iconeye} />
+              </div>
+              <div className="ak-900-01-500x500-1-wrapper">
+                <img
+                  className="ak-900-01-500x500-1-icon"
+                  alt=""
+                  src={ak90}
+                />
+              </div>
+            </div>
+            <div className="havit-hv-g92-gamepad-parent">
+              <div className="add-to-cart">AK-900 Wired Keyboard</div>
+              <div className="parent">
+                <div className="add-to-cart">$960</div>
+                <div className="div4">$1160</div>
+              </div>
+              <div className="five-star-parent">
+                <div className="four-star">
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon4" alt="" src="/vector1.svg" />
+                </div>
+                <div className="div5">(75)</div>
+              </div>
+            </div>
+          </div>
+          <div className="cart-with-flat-discount">
+            <div className="discount-percent-parent">
+              <div className="discount-percent">
+                <div className="div2">-30%</div>
+              </div>
+              <div className="fill-heart-parent">
+                <img className="fill-heart-icon" alt="" src={iconheart} />
+                <img className="fill-heart-icon" alt="" src={iconeye} />
+              </div>
+              <div className="g92-2-500x500-1-wrapper">
+                <img
+                  className="g27cq4-500x500-1-icon"
+                  alt=""
+                  src={g27}
+                />
+              </div>
+            </div>
+            <div className="havit-hv-g92-gamepad-parent">
+              <div className="add-to-cart">IPS LCD Gaming Monitor</div>
+              <div className="parent">
+                <div className="add-to-cart">$370</div>
+                <div className="div4">$400</div>
+              </div>
+              <div className="five-star-parent">
+                <div className="four-star">
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                </div>
+                <div className="div5">(99)</div>
+              </div>
+            </div>
+          </div>
+          <div className="cart">
+            <div className="discount-percent-parent">
+              <div className="fill-heart-parent">
+                <img className="fill-heart-icon" alt="" src={iconheart} />
+                <img className="fill-heart-icon" alt="" src={iconeye} />
+              </div>
+              <div className="gammaxx-l240-argb-1-500x500-1-wrapper">
+                <img
+                  className="gammaxx-l240-argb-1-500x500-1-icon"
+                  alt=""
+                  src={gammax}
+                />
+              </div>
+            </div>
+            <div className="free-delivery-parent">
+              <div className="add-to-cart">RGB liquid CPU Cooler</div>
+              <div className="parent">
+                <div className="add-to-cart">$160</div>
+                <div className="div4">$170</div>
+              </div>
+              <div className="five-star-parent">
+                <div className="four-star">
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
+                  <img className="vector-icon" alt="" src={start} />
                   <img
-                    src="."
-                    alt="Rectangle15I261"
-                    class="product-detailspage-rectangle15"
+                    className="star-half-filled-icon"
+                    alt=""
+                    src={starthalf}
                   />
-                  <span class="product-detailspage-text071 Title16PXMedium">
-                    <span>Add To Cart</span>
-                  </span>
-                  <div class="product-detailspage-frame5751">
-                    <div class="product-detailspage-fill-heart1">
-                      {/* <img
-                        src={heart}
-                        alt="Ellipse12I261"
-                        class="product-detailspage-ellipse121"
-                      /> */}
-                      <img
-                        src={heart}
-                        alt="heartsmallI261"
-                        class="product-detailspage-heartsmall1"
-                      />
-                    </div>
-                    <div class="product-detailspage-fill-eye1">
-                      {/* <img
-                        src={eye}
-                        alt="Ellipse13I261"
-                        class="product-detailspage-ellipse131"
-                      /> */}
-                      <div class="product-detailspage-quick-view1">
-                        <div class="product-detailspage-group1">
-                          <img
-                            src={eye}
-                            alt="VectorI261"
-                            class="product-detailspage-vector02"
-                          />
-                          {/* <img
-                            src="public/external/vectori261-yr1b.svg"
-                            alt="VectorI261"
-                            class="product-detailspage-vector03"
-                          /> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-detailspage-frame612">
-                    <img
-                      src={product2}
-                      alt="ak90001500x5001I261"
-                      class="product-detailspage-ak90001500x5001"
-                    />
-                  </div>
                 </div>
-                <div class="product-detailspage-frame5691">
-                  <span class="product-detailspage-text073 Title16PXMedium">
-                    <span>AK-900 Wired Keyboard</span>
-                  </span>
-                  <div class="product-detailspage-frame5671">
-                    <span class="product-detailspage-text075 Title16PXMedium">
-                      <span>$960</span>
-                    </span>
-                    <span class="product-detailspage-text077">
-                      <span>$1160</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame5661">
-                    <img
-                      src="public/external/fourstari261-rlp8.svg"
-                      alt="FourStarI261"
-                      class="product-detailspage-four-star1"
-                    />
-                    <span class="product-detailspage-text079 Title14PXSemibold">
-                      <span>(75)</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="product-detailspage-cart-with-flat-discount2">
-                <div class="product-detailspage-frame5702">
-                  <div class="product-detailspage-discountpercent2">
-                    <span class="product-detailspage-text081 Title12PXRegular">
-                      <span>-30%</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame5752">
-                    <div class="product-detailspage-fill-heart2">
-                      {/* <img
-                        src={heart}
-                        alt="Ellipse12I261"
-                        class="product-detailspage-ellipse122"
-                      /> */}
-                      <img
-                        src={heart}
-                        alt="heartsmallI261"
-                        class="product-detailspage-heartsmall2"
-                      />
-                    </div>
-                    <div class="product-detailspage-fill-eye2">
-                      {/* <img
-                        src={eye}
-                        alt="Ellipse13I261"
-                        class="product-detailspage-ellipse132"
-                      /> */}
-                      <div class="product-detailspage-quick-view2">
-                        <div class="product-detailspage-group2">
-                          <img
-                            src={eye}
-                            alt="VectorI261"
-                            class="product-detailspage-vector04"
-                          />
-                          {/* <img
-                            src="public/external/vectori261-00em.svg"
-                            alt="VectorI261"
-                            class="product-detailspage-vector05"
-                          /> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-detailspage-frame613">
-                    <img
-                      src={product3}
-                      alt="g27cq4500x5001I261"
-                      class="product-detailspage-g27cq4500x5001"
-                    />
-                  </div>
-                </div>
-                <div class="product-detailspage-frame5692">
-                  <span class="product-detailspage-text083 Title16PXMedium">
-                    <span>IPS LCD Gaming Monitor</span>
-                  </span>
-                  <div class="product-detailspage-frame5672">
-                    <span class="product-detailspage-text085 Title16PXMedium">
-                      <span>$370</span>
-                    </span>
-                    <span class="product-detailspage-text087">
-                      <span>$400</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame5662">
-                    <img
-                      src="public/external/fivestari261-64xk.svg"
-                      alt="FivestarI261"
-                      class="product-detailspage-fivestar1"
-                    />
-                    <span class="product-detailspage-text089 Title14PXSemibold">
-                      <span>(99)</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="product-detailspage-cart">
-                <div class="product-detailspage-cart1">
-                  <div class="product-detailspage-frame568">
-                    <div class="product-detailspage-fill-heart3">
-                      {/* <img
-                        src={heart}
-                        alt="Ellipse12I261"
-                        class="product-detailspage-ellipse123"
-                      /> */}
-                      <img
-                        src={heart}
-                        alt="heartsmallI261"
-                        class="product-detailspage-heartsmall3"
-                      />
-                    </div>
-                    <div class="product-detailspage-fill-eye3">
-                      {/* <img
-                        src={eye}
-                        alt="Ellipse13I261"
-                        class="product-detailspage-ellipse133"
-                      /> */}
-                      <div class="product-detailspage-quick-view3">
-                        <div class="product-detailspage-group3">
-                          <img
-                            src={eye}
-                            alt="VectorI261"
-                            class="product-detailspage-vector06"
-                          />
-                          {/* <img
-                            src="public/external/vectori261-n28.svg"
-                            alt="VectorI261"
-                            class="product-detailspage-vector07"
-                          /> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-detailspage-frame610">
-                    <img
-                      src={product4}
-                      alt="gammaxxl240argb1500x5001I261"
-                      class="product-detailspage-gammaxxl240argb1500x5001"
-                    />
-                  </div>
-                </div>
-                <div class="product-detailspage-frame5693">
-                  <span class="product-detailspage-text091 Title16PXMedium">
-                    <span>RGB liquid CPU Cooler</span>
-                  </span>
-                  <div class="product-detailspage-frame5673">
-                    <span class="product-detailspage-text093 Title16PXMedium">
-                      <span>$160</span>
-                    </span>
-                    <span class="product-detailspage-text095">
-                      <span>$170</span>
-                    </span>
-                  </div>
-                  <div class="product-detailspage-frame5663">
-                    <img
-                      src="public/external/fourhalfstari261-sx9t.svg"
-                      alt="FourHalfStarI261"
-                      class="product-detailspage-four-half-star"
-                    />
-                    <span class="product-detailspage-text097 Title14PXSemibold">
-                      <span>(65)</span>
-                    </span>
-                  </div>
-                </div>
+                <div className="div5">(65)</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-       </div>
     )
 }
 

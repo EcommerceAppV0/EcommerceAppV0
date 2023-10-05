@@ -61,7 +61,7 @@ function App() {
       </Routes>
 
       {/* the footer will be the last compnetnts for all  */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

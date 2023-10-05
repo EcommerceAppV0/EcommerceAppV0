@@ -50,8 +50,6 @@ const HomePage = () => {
                         />
                     </Carousel.Item>
                 </Carousel>
-
-
             </div>
             <div className='flashSales wrap2'>
                 <div className='flash-sales-today-timer'>
@@ -384,7 +382,6 @@ const HomePage = () => {
                 </div>
 
             </div>
-
         </div>
     )
 }

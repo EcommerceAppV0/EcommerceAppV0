@@ -58,6 +58,9 @@ module.exports.login = async (req, res) => {
                     message: "Login Successfull",
                     email: User.email,
                     token: Token,
+                    name: User.name,
+                    type: User.type,
+                    userId: User.id
                 })
             }).catch((error) => {
                 res.status(400).send({

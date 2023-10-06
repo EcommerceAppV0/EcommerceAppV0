@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import "./style.css"
+import Spinner from 'react-bootstrap/Spinner';
 import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
 // import {  useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
 import { useSelector, useDispatch } from 'react-redux'
-import { setLoggedIn } from "../../slicers/userSlicer"
+import { setLoggedIn, setUser } from "../../slicers/userSlicer"
 const Login = () => {
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
 
     const navigate = useNavigate()
-    const [login, { isLoading }] = useLoginMutation()
+    const [login, { isLoading, isError }] = useLoginMutation()
     const [form, setForm] = useState({
         email: '',
         password: ''
@@ -21,14 +22,13 @@ const Login = () => {
     }
     const handleSubmit = async (body) => {
         try {
-            const { token } = await login(body).unwrap()
-            // const { token } = res
-            // console.log(res);
+            const { token, email, name, type, userId } = await login(body).unwrap()
             // then navigate
             dispatch(setLoggedIn({ token, loggedIn: true }))
+            dispatch(setUser({ email, name, userId, type }))
             // then go to contact 
             //will be changed after
-            navigate("/about")
+            navigate("/home")
         } catch (error) {
             console.log(error);
         }
@@ -71,7 +71,18 @@ const Login = () => {
                         <div>Forget Password?</div>
                     </div>
                     {/* here we will add some toast for loading */}
-                    {isLoading && <h1>Loading....</h1>}
+                    {isLoading &&
+                        <div style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "center" }}>
+                            <Spinner animation="border" variant="danger" />
+                            <Spinner animation="border" variant="warning" />
+                            <Spinner animation="border" variant="info" />
+                            <Spinner animation="border" variant="dark" />
+                            <h1> loading..</h1>
+                        </div>
+                    }
+
+                    {/* after we will add some Toasts for Ux Thank you  */}
+                    {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>
 

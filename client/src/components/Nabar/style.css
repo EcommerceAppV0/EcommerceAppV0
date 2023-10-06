@@ -38,6 +38,13 @@
     align-items: center;
 }
 
+.link:hover {
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.1);
+    border-bottom: 1px solid #000;
+}
+
 .search-bar {
     display: flex;
     background-color: #F5F5F5;
@@ -51,6 +58,7 @@
 }
 
 .search-bar .search {
+    outline: none;
     font-family: Poppins;
     font-size: 0.75rem;
     font-style: normal;

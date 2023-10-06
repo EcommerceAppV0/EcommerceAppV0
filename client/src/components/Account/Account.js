@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useSelector } from "react-redux";
+import { useUpdateInfoMutation } from "../../slicers/userApiSlice";
 
 const Account = () => {
+  const { user } = useSelector((state) => state.value);
+  const [updateInfo ,{isLoading , isSuccess , isError}] = useUpdateInfoMutation()
   const [form, setForm] = useState({
-    firstName: "",
+    name: "",
     lastName: "",
     email: "",
-    password: "",
     adress: "",
+    old: "",
+    currentId: user.userId,
+    newPassword: "",
+    confirmPassword: "",
   });
-  const [password, setPassword] = useState({ old: "", new: "", confirm: "" });
-  const { user } = useSelector((state) => state.value);
-  
 
+
+  const handleSubmit = async (form) => {
+    console.log(form);
+    if(form.newPassword === form.confirmPassword) {
+      const res = await updateInfo({name: form.name, lastName: form.lastName, email: form.email , adress: form.adress , newPassword : form.newPassword , currentId:form.currentId , old: form.old }).unwrap()
+      console.log(res);
+    }
+    else{
+      console.log("password and confirm password do not match");
+    }
+  }
 
   return (
     <div className="Account-container">
@@ -54,9 +68,7 @@ const Account = () => {
               <input
                 type="text"
                 placeholder="Md"
-                onChange={(e) =>
-                  setForm({ ...form, firstName: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
               />
             </div>
             <div className="input-div">
@@ -86,13 +98,31 @@ const Account = () => {
           </div>
           <div className="account-password">
             <label>Password Changes</label>
-            <input type="password" placeholder="Current Password" />
-            <input type="password" placeholder="New Password" />
-            <input type="password" placeholder="Confirm New Password" />
+            <input
+              type="password"
+              placeholder="Current Password"
+              onChange={(e) => setForm({ ...form, old: e.target.value })}
+            />
+            <input
+              type="password"
+              placeholder="New Password"
+              onChange={(e) =>
+                setForm({ ...form, newPassword: e.target.value })
+              }
+            />
+            <input
+              type="password"
+              placeholder="Confirm New Password"
+              onChange={(e) =>
+                setForm({ ...form, confirmPassword: e.target.value })
+              }
+            />
           </div>
           <div className="account-buttons">
             <button id="cancel">Cancel</button>
-            <button id="save">Save Changes</button>
+            <button id="save" onClick={()=>handleSubmit(form)}>Save Changes</button>
+            {/* {isSuccess && <div> updated user</div>} */}
+            {isError && <div> error</div>}
           </div>
         </div>
       </div>

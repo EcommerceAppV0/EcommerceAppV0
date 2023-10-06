@@ -16,9 +16,25 @@ module.exports = (sequelize, DataTypes) => {
             required: true,
             unique: false
         },
+        lastName: {
+            type: DataTypes.STRING,
+            unique: false
+        },
+        adress: {
+            type: DataTypes.STRING,
+            unique: false
+        },
         type: {
             type: DataTypes.ENUM,
             values: ['admin', 'Client', 'seller']
+        },
+        wishlist:{
+            type: DataTypes.JSON,
+            defaultValue: []
+        },
+        cartlist:{
+            type: DataTypes.JSON,
+            defaultValue: []
         }
 
     })

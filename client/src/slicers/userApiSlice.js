@@ -16,8 +16,22 @@ export const usersApiSlice = userApi.injectEndpoints({
                 body: data
             })
         }),
+        updateInfo: builder.mutation({
+            query: (data) => ({
+                url: "http://localhost:5000/api/updateInfo",
+                method: "PUT",
+                body: data
+            })
+        }),
+        updateLists : builder.mutation({
+            query: (data , id) => ({
+                url: `http://localhost:5000/api/updateLists/${id}`,
+                method: "PUT",
+                body: data
+            })
+        })
     }),
 })
 
 
-export const { useRegisterMutation, useLoginMutation } = usersApiSlice 
+export const { useRegisterMutation, useLoginMutation , useUpdateInfoMutation , useUpdateListsMutation } = usersApiSlice 

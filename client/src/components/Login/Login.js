@@ -6,7 +6,7 @@ import phoneImage from "../../assets/images/dl.beatsnoop 1.png"
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
 import { useSelector, useDispatch } from 'react-redux'
-import { setLoggedIn , setUser} from "../../slicers/userSlicer"
+import { setLoggedIn, setUser } from "../../slicers/userSlicer"
 const Login = () => {
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
@@ -22,13 +22,10 @@ const Login = () => {
     }
     const handleSubmit = async (body) => {
         try {
-            const { token ,email , name, type , userId} = await login(body).unwrap()
-            // then navigate
+            const { token, email, name, type, userId, cartlist, lastName, wishlist } = await login(body).unwrap()
             dispatch(setLoggedIn({ token, loggedIn: true }))
-            dispatch(setUser({email, name , userId , type}))
-            // then go to contact 
-            //will be changed after
-            navigate("/about")
+            dispatch(setUser({ email, name, type, userId, cartlist, lastName, wishlist }))
+            navigate("/home")
         } catch (error) {
             console.log(error);
         }

@@ -1,8 +1,9 @@
 import React from 'react'
 import manette from "../../assets/images/manette.png"
-
+import { useNavigate } from 'react-router-dom'
 
 const CardContainer = ({ ispromo }) => {
+    const navigate = useNavigate()
     return (
         <div className='card-container'>
             <div className='card-images'>
@@ -10,7 +11,9 @@ const CardContainer = ({ ispromo }) => {
                     <button style={{ visibility: !ispromo ? "hidden" : "block" }}>-40%</button>
                     <i class="fa-regular fa-heart fa-lg" style={{ color: " #0a0a0a" }}></i>
                 </div>
-                <i class="fa-regular fa-eye fa-lg" style={{ color: "black" }}></i>
+                <i class="fa-regular fa-eye fa-lg"
+                    onClick={() => navigate('/productdetails')}
+                    style={{ color: "black" }}></i>
 
                 <img src={manette} />
             </div>

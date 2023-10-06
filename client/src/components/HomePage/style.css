@@ -1,9 +1,11 @@
 .all-of-all {
     width: 100%;
     /* background-color: red; */
-    height: 700vh;
+    height: fit-content;
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
+
     gap: 2rem;
     padding: 3rem 10rem;
 }
@@ -374,4 +376,16 @@
     cursor: pointer;
     transform: scale(1.05);
     border-bottom: 1px solid #000;
+}
+
+
+.arrow-up-comp {
+    transition: 1s;
+    position: sticky;
+    bottom: 2rem;
+    left: 90%;
+}
+
+.arrow-up-comp:hover {
+    transform: rotate(360deg);
 }

@@ -31,13 +31,41 @@ db.Category = Category;
 // console.log(db.Category);
 
 const categories = [
-  { name: "Phones" },
-  { name: "Computers" },
-  { name: "Clothes" },
-  { name: "Camera" },
-  { name: "Gaming" },
-  { name: "Furnitue" },
-  { name: "Food" },
+  {
+    name: "Phones",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696615672/lu3iswfyob3gs4yrq20m.png",
+  },
+  {
+    name: "Computers",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696615914/yczsajlbt7adyr45ldey.png",
+  },
+  {
+    name: "Clothes",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696616482/fcy8vpp6n2nyxrqvl5zd.png",
+  },
+  {
+    name: "Camera",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696615780/ktaacizhkgpdbxfcxuja.png",
+  },
+  {
+    name: "Gaming",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696615914/yczsajlbt7adyr45ldey.png",
+  },
+  {
+    name: "Furnitue",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696616703/gkyz4bdltqzdvebifaen.png",
+  },
+  {
+    name: "Food",
+    image:
+      "https://res.cloudinary.com/daexsprzx/image/upload/v1696616804/n5xc04iywdg18oxwfyik.png",
+  },
 ];
 
 const products = [
@@ -257,7 +285,7 @@ const products = [
     images: [
       "https://s3-alpha-sig.figma.com/img/e7bd/d116/62ea1dfc2d615a5bb054e139a764f306?Expires=1697414400&Signature=mPTGzb-xK~3UNgi79ZjQP9Cmwyzx8nB3bNuddv29nsUpLKo6CV4i87rlraR5T5c3a1~D5ZagwoXKH1nqzPcVvOQLUZeztWSNOTuToaj-y92CcIdmb9H3W726V5MrHnJDxteLCXntiQMdJiwbuwKmSstmYqZ2dwv2oYFoOm3Uf85aQ~yYpObGtQlyE6LMmaPG3a-6Zjg~lzzS7ckA5zLrIEDLYDXTYl5gizXsduZLNaAiVwTScbQwyTEngavk8JJ6hEje5J9s-7SV65ug-MHV4cMVXZvC0KLHLLzKwpbkQ5U1LJRr07BolNSIoB~nGcCDYOsjFFquI1W1wGAchV0RfA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
     ],
-    categoryId : 3
+    categoryId: 3,
   },
   {
     name: "Quilted Satin Jacket",
@@ -271,11 +299,10 @@ const products = [
     images: [
       "https://s3-alpha-sig.figma.com/img/04a1/915f/d6cedd7c8b1073685c5f1be1b50e1ac6?Expires=1697414400&Signature=cHgvjZ3w5dwEDTk38l11QBqMYrD5eYG1K3AXU5vbSTV0LqDOLHeL5bahveT61CDmnZ-VBpmN7IS2VdFBvwn0hbptVK3BTI6vj6LOe~gY20MpdrxwixYcCMEzGOsWLzwFdLgTSiDwar-ZNepiQPbPE0nE8zwkVSvhSoCPwZ-Rl8g10t~9e8GmABRGLENyfBMpdN~2YeaOsfw4o2xfkHBx8Wnnoib2IVCzHmHBQiTqCBLjj8OQ5gZ~EVAOzem7BuxVyCqCufKrdDAV~ZbPRwCiemNA74xz7u2OqyBfaBgiydWgCU0QXhSkclnJjXunrB4IP~9C9P39ST2kre5WkJWwVg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
     ],
-    categoryId : 3
+    categoryId: 3,
   },
 ];
-//   Category.bulkCreate(categories, { ignoreDuplicates: true });
-//   Product.bulkCreate(products, { ignoreDuplicates: true });
-
+  // Category.bulkCreate(categories, { ignoreDuplicates: true });
+  // Product.bulkCreate(products, { ignoreDuplicates: true });
 
 module.exports = db;

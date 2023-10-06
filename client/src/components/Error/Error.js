@@ -4,7 +4,7 @@ import "./style.css"
 const Error = () => {
     return (
         <div className="error">
-            <div className="roadmap">
+            <div className="roadmap-error">
                 <div className="account">Home</div>
                 {/* line later */}
                 /
@@ -17,8 +17,8 @@ const Error = () => {
                     Your visited page not found. You may go home page.
                 </div>
             </div>
-            <div className='third'>
-                <div className="button">
+            <div className='third-error'>
+                <div className="button-error">
                     <div className="view-all-products">Back to home page</div>
                 </div>
             </div>

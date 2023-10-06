@@ -22,12 +22,9 @@ const Login = () => {
     }
     const handleSubmit = async (body) => {
         try {
-            const { token, email, name, type, userId } = await login(body).unwrap()
-            // then navigate
+            const { token, email, name, type, userId, cartlist, lastName, wishlist } = await login(body).unwrap()
             dispatch(setLoggedIn({ token, loggedIn: true }))
-            dispatch(setUser({ email, name, userId, type }))
-            // then go to contact 
-            //will be changed after
+            dispatch(setUser({ email, name, type, userId, cartlist, lastName, wishlist }))
             navigate("/home")
         } catch (error) {
             console.log(error);

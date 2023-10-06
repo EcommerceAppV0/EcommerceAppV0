@@ -19,6 +19,7 @@
     justify-content: center !important;
     flex-direction: column;
     font-family:  Poppins;
+    color: white !important;
   }
   
   .footer .frame {

@@ -68,11 +68,11 @@ export const Footer = () => {
             </div>
             <div
               className="text-wrapper-3"
-              onClick={() => navigate("/wishlist")}
+              onClick={() => {loggedIn ? navigate("/wishlist"): navigate("/error")}}
             >
               Wishlist
             </div>
-            <div className="text-wrapper-3" onClick={() =>loggedIn ?  navigate("/shop") : navigate("/error")}>
+            <div className="text-wrapper-3" onClick={() =>loggedIn ?  navigate("/home") : navigate("/error")}>
               Shop
             </div>
           </div>

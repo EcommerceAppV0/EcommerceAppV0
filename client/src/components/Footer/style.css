@@ -136,7 +136,7 @@
   }
   
   .footer .text-wrapper-4 {
-    color: var(--text);
+    color: white !important;
     font-family: var(--title-20px-medium-font-family);
     font-size: 20px;
     font-style: var(--title-20px-medium-font-style);

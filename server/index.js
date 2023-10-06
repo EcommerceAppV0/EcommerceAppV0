@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config()
-require('./database/index.js')
 const app = express();
+const db=require('./database/index.js')
 const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 const userRouter = require('./routers/userRouter.js')
@@ -25,3 +25,8 @@ app.use("/api/categories", categoryRouter);
 // });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`))
+
+module.exports = db;
+
+
+

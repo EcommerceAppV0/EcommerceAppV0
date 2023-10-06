@@ -58,6 +58,7 @@
 }
 
 .search-bar .search {
+    outline: none;
     font-family: Poppins;
     font-size: 0.75rem;
     font-style: normal;

@@ -15,7 +15,7 @@
     /* changed later */
     /* overflow: hidden; */
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: flex-start;
     justify-content: space-between;
     font-size: 0.88rem;
@@ -24,7 +24,7 @@
 }
 
 
-.roadmap {
+.roadmap-error {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,18 +57,18 @@
 }
 
 .view-all-products {
-    /* position: relative; */
+    position: relative;
     line-height: 1.5rem;
     font-weight: 500;
 }
 
-.third {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.third-error {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
 }
 
-.button {
+.third-error button {
     border-radius: 4px;
     background-color: #db4444;
     padding: 1rem 3rem;

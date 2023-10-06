@@ -1,7 +1,7 @@
 .all-of-all {
     width: 100%;
     /* background-color: red; */
-    height: 600vh;
+    height: 700vh;
     display: flex;
     flex-direction: column;
     gap: 2rem;

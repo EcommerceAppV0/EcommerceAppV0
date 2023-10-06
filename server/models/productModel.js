@@ -29,7 +29,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         status: {
             type: DataTypes.ENUM,
-            values: ['InStock', 'Out Of Stock']
+            values: ['in stok', 'out of stock', "sale", "new"]
+        },
+        promo: {
+            type: DataTypes.INTEGER,
         },
         images: {
             type: DataTypes.JSON,

@@ -25,8 +25,3 @@ app.use("/api/categories", categoryRouter);
 // });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`))
-
-
-
-
-

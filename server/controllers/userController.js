@@ -129,7 +129,15 @@ module.exports.updateUserInfo = async (req, res) => {
                 { where: { id: currentId } }
               )
                 .then((response) => {
-                  res.json({ message: "user updated", response })
+                  const token = jwt.sign(
+                    {
+                      userId: currentId,
+                      email: email,
+                    },
+                    process.env.SECRET_KEY,
+                    { expiresIn: "24h" }
+                  );
+                  res.json({ message: "user updated", response, token })
                 })
                 .catch((error) =>
                   res.json({ message: "user is not updated", error })

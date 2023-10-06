@@ -14,7 +14,6 @@ export const userSlicer = createSlice({
             const { token, loggedIn } = action.payload;
             localStorage.setItem('userToken', JSON.stringify(token))
             state.userToken = token;
-            // changed
             state.loggedIn = loggedIn;
         },
         setUser: (state, action) => {

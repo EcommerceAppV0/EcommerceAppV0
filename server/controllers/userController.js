@@ -111,7 +111,7 @@ module.exports.updateLists = async (req, res) => {
 
 module.exports.updateUserInfo = async (req, res) => {
   try {
-    const { old, currentId, newPassword, adress, name, lastName } = req.body;
+    const { old, currentId, newPassword, adress, name, lastName , email} = req.body;
     const { password } = await User.findOne({ where: { id: currentId } });
     bcrypt
     .compare(old, password)
@@ -121,7 +121,7 @@ module.exports.updateUserInfo = async (req, res) => {
             .hash(newPassword, 10)
             .then((newHashedPassword) => {
                 User.update(
-                { password: newHashedPassword, name, adress, lastName },
+                { password: newHashedPassword, name, adress, lastName ,email },
                 { where: { id: currentId } }
                 )
                 .then((response) => {

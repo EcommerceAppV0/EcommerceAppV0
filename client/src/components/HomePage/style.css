@@ -214,9 +214,11 @@
 
 
 .fa-heart:hover {
-    color: #DB4444 !important;
+    transform: scale(1.1);
     cursor: pointer;
 }
+
+
 
 .fa-eye:hover {
     color: green !important;

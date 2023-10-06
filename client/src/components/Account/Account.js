@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useUpdateInfoMutation } from "../../slicers/userApiSlice";
+import { setUser, setLoggedIn } from "../../slicers/userSlicer";
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
   const { user } = useSelector((state) => state.value);
+  const dipsatch = useDispatch()
+  const navigate = useNavigate()
   const [updateInfo, { isLoading, isSuccess, isError }] = useUpdateInfoMutation()
   const [form, setForm] = useState({
     name: "",
@@ -21,7 +25,11 @@ const Account = () => {
   const handleSubmit = async (form) => {
     if (form.newPassword === form.confirmPassword) {
       const res = await updateInfo(form).unwrap()
-      console.log(res);
+      if (res.message === "user updated") {
+        dipsatch(setUser({ ...user, email: form.email, adress: form.adress, name: form.name, lastName: form.lastName }))
+        dipsatch(setLoggedIn({ loggedIn: true, token: res.token }))
+        navigate('/home')
+      }
     }
     else {
       console.log("password and confirm password do not match");

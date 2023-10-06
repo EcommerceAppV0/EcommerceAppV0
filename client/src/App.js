@@ -27,7 +27,7 @@ function App() {
       {/* This to compnents will be for all the app  */}
       <TopHeader />
       <Navabr />
-      <Wishlist/>
+      {/* <Wishlist/> */}
 
       {/* heree it will be the routers */}
       {/* <SignUp /> */}

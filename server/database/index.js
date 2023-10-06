@@ -76,7 +76,8 @@ const products = [
     colors: "red",
     size: "M",
     rate: 5,
-    status: "in stock",
+    status: "sale",
+    promo: 50,
     images: [
       "https://s3-alpha-sig.figma.com/img/ee9a/3800/1e9f94261b28e16ea21bacb4144473e8?Expires=1697414400&Signature=IQqHAHLL3Gv9ceVIBIEitsgvynk5PLxyb7SJFg1kEBzCF~9Ybj~Pwt1D0THbOgRUJfocFaVkL5CEkN1sckEHyXxwBZolF3K5Md3sOV8PcIL0iHwnlrBjOkR3s5~bRHUtVuhooOPkbwByorztDAw6ZmU-1vy8vTPzRYd5Z1RvB2nvYjFV5oT7oFouKFfuZCy~B7FCWRD7tiyFaIIyToAVoPhBoiJZAkiYCWedh6jTbGmVFF3ra84r~N~sYXXTDrrUpgDfkP2EsggVT~KqbR8XfWUM9beYCKKqVycRmXNtat0aSvFPu0Zb9EjEsNMmPToQhEjsJ4bc1y6T6rKDyeVrbg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
     ],
@@ -302,8 +303,8 @@ const products = [
     categoryId: 3,
   },
 ];
-//   Category.bulkCreate(categories, { ignoreDuplicates: true });
-//   Product.bulkCreate(products, { ignoreDuplicates: true });
+// Category.bulkCreate(categories, { ignoreDuplicates: true });
+// Product.bulkCreate(products, { ignoreDuplicates: true });
 
 
 module.exports = db;

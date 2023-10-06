@@ -11,7 +11,7 @@ const CardContainer = ({ ispromo, prod }) => {
         <div className='card-container'>
             <div className='card-images'>
                 <div className='promtion-div-wish'>
-                    <button style={{ visibility: !ispromo ? "hidden" : "block" }}>-40%</button>
+                    <button style={{ visibility: !ispromo ? "hidden" : "block" }}>-{prod.promo}%</button>
                     <i
                         onClick={() =>
                             // then Changed

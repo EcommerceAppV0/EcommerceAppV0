@@ -18,7 +18,7 @@ const Error = () => {
                 </div>
             </div>
             <div className='third-error'>
-                <div className="button">
+                <div className="button-error">
                     <div className="view-all-products">Back to home page</div>
                 </div>
             </div>

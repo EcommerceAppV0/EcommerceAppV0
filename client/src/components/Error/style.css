@@ -68,7 +68,7 @@
     width: 100% !important;
 }
 
-.third-error button {
+.third-error .button-error {
     border-radius: 4px;
     background-color: #db4444;
     padding: 1rem 3rem;

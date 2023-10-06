@@ -147,12 +147,13 @@ const HomePage = () => {
             {products
               .filter((prod) => prod.status === "sale")
               .map((prod) => (
-                <CardContainer ispromo={true} key={prod.id} prod={prod} />
+                <CardContainer key={prod.id} prod={prod} />
               ))}
           </div>
-          <div className="viewallbtn d-flex align-items-center justify-content-center">
+          {/* Rabi Ysahel  */}
+          {/* <div className="viewallbtn d-flex align-items-center justify-content-center">
             <button>View All Products</button>
-          </div>
+          </div> */}
           <hr
             style={{
               height: "0rem",
@@ -207,7 +208,7 @@ const HomePage = () => {
             {
               products.map((prod, i) => {
                 if (i < 12 && i > 7) {
-                  return <CardContainer key={prod.id} ispromo={false} prod={prod} />
+                  return <CardContainer key={prod.id} prod={prod} />
                 } else {
                   return null
                 }
@@ -284,7 +285,7 @@ const HomePage = () => {
             {
               products.map((prod, index) => {
                 if (index < limit) {
-                  return <CardContainer key={prod.id} ispromo={true} prod={prod} />
+                  return <CardContainer key={prod.id} prod={prod} />
                 } else {
                   return null
                 }

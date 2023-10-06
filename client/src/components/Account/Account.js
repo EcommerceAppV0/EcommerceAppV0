@@ -45,10 +45,7 @@ const Account = () => {
         <h6 id="welcome">
           Welcome{"  "}
           <p>
-            username
-            {
-              //! username
-            }
+            {user.name}
           </p>
         </h6>
       </div>

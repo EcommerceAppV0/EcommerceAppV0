@@ -109,7 +109,7 @@ module.exports.updateLists = async (req, res) => {
     });
     res.json(update);
   } catch (error) {
-    throw error;
+    res.status(404).json(error);
   }
 };
 

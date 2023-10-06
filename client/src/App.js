@@ -10,6 +10,7 @@ import { Footer } from './components/Footer/Footer';
 import { Routes, Route, Navigate } from "react-router-dom"
 import About from "./components/AboutUs/AboutUs"
 import { useSelector } from 'react-redux'
+import Wishlist from './components/WishList/WishList';
 import Account from './components/Account/Account';
 import Cart from './components/Cart/Cart';
 import HomePage from './components/HomePage/HomePage';
@@ -26,6 +27,7 @@ function App() {
       {/* This to compnents will be for all the app  */}
       <TopHeader />
       <Navabr />
+      {/* <Wishlist/> */}
 
       {/* heree it will be the routers */}
       {/* <SignUp /> */}

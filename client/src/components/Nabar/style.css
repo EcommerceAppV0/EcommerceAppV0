@@ -132,3 +132,8 @@
     background-color: #666166;
     filter: brightness(80%);
 }
+
+.icon svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -14,8 +14,8 @@ const User = require("../models/userModel")(sequelize, DataTypes)
 const Product = require("../models/productModel")(sequelize, DataTypes)
 const Category = require("../models/categoryModel")(sequelize, DataTypes)
 
-User.hasMany(Product)
-Product.belongsTo(User)
+// User.hasMany(Product)
+// Product.belongsTo(User)
 
 Category.hasMany(Product)
 Product.belongsTo(Category)
@@ -27,6 +27,7 @@ Product.belongsTo(Category)
 // sequelize.sync({ force: true })
 //     .then(() => console.log("tables synced"))
 //     .catch(err => console.log(err));
+
 
 
 

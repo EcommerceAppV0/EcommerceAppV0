@@ -19,9 +19,9 @@ const Category = require("../models/categoryModel")(sequelize, DataTypes);
 Category.hasMany(Product);
 Product.belongsTo(Category);
 
-sequelize.sync({ force: true })
-    .then(() => console.log("tables synced"))
-    .catch(err => console.log(err));
+// sequelize.sync({ force: true })
+//     .then(() => console.log("tables synced"))
+//     .catch(err => console.log(err));
 
 const db = {};
 
@@ -274,8 +274,8 @@ const products = [
     categoryId : 3
   },
 ];
-//   Category.bulkCreate(categories, { ignoreDuplicates: true });
-//   Product.bulkCreate(products, { ignoreDuplicates: true });
+  // Category.bulkCreate(categories, { ignoreDuplicates: true });
+  // Product.bulkCreate(products, { ignoreDuplicates: true });
 
 
 module.exports = db;

@@ -58,6 +58,7 @@ function App() {
         <Route path='/account' element={<Account />} />
         <Route path='/*' element={<Error />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/wishlist' element={<Wishlist />} />
         {/* handle errror routeres  */}
 
         {/* <Route path=''/>

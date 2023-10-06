@@ -133,6 +133,10 @@
     filter: brightness(80%);
 }
 
+.icon svg {
+    transition: 0.4s;
+}
+
 .icon svg:hover {
     cursor: pointer;
     transform: scale(1.1);

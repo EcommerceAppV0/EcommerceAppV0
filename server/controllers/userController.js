@@ -63,6 +63,10 @@ module.exports.login = async (req, res) => {
             token: Token,
             name: User.name,
             type: User.type,
+            lastName: User.lastName,
+            adress: User.address,
+            wishlist: User.wishlist,
+            cartlist: User.cartlist,
             userId: User.id,
           });
         })
@@ -111,38 +115,38 @@ module.exports.updateLists = async (req, res) => {
 
 module.exports.updateUserInfo = async (req, res) => {
   try {
-    const { old, currentId, newPassword, adress, name, lastName , email} = req.body;
+    const { old, currentId, newPassword, adress, name, lastName, email } = req.body;
     const { password } = await User.findOne({ where: { id: currentId } });
     bcrypt
-    .compare(old, password)
-    .then((passCheck) => {
+      .compare(old, password)
+      .then((passCheck) => {
         if (passCheck) {
-            bcrypt
+          bcrypt
             .hash(newPassword, 10)
             .then((newHashedPassword) => {
-                User.update(
-                { password: newHashedPassword, name, adress, lastName ,email },
+              User.update(
+                { password: newHashedPassword, name, adress, lastName, email },
                 { where: { id: currentId } }
-                )
+              )
                 .then((response) => {
-                    res.json({ message: "user updated", response })
+                  res.json({ message: "user updated", response })
                 })
                 .catch((error) =>
-                res.json({ message: "user is not updated", error })
+                  res.json({ message: "user is not updated", error })
                 );
             })
             .catch((error) => {
-                res.json({ message: "cannot hash password", error });
+              res.json({ message: "cannot hash password", error });
             });
         }
-        else{
-            res.json({ message: "Password does not match" });
+        else {
+          res.json({ message: "Password does not match" });
         }
-    })
-    .catch(() => {
+      })
+      .catch(() => {
         res.json({ message: "Password does not match", error });
-    });
-} catch (error) {
+      });
+  } catch (error) {
     res.status(404).json(error);
   }
 };

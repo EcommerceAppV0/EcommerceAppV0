@@ -5,7 +5,7 @@ import { useUpdateInfoMutation } from "../../slicers/userApiSlice";
 
 const Account = () => {
   const { user } = useSelector((state) => state.value);
-  const [updateInfo ,{isLoading , isSuccess , isError}] = useUpdateInfoMutation()
+  const [updateInfo, { isLoading, isSuccess, isError }] = useUpdateInfoMutation()
   const [form, setForm] = useState({
     name: "",
     lastName: "",
@@ -19,12 +19,11 @@ const Account = () => {
 
 
   const handleSubmit = async (form) => {
-    console.log(form);
-    if(form.newPassword === form.confirmPassword) {
-      const res = await updateInfo({name: form.name, lastName: form.lastName, email: form.email , adress: form.adress , newPassword : form.newPassword , currentId:form.currentId , old: form.old }).unwrap()
+    if (form.newPassword === form.confirmPassword) {
+      const res = await updateInfo(form).unwrap()
       console.log(res);
     }
-    else{
+    else {
       console.log("password and confirm password do not match");
     }
   }
@@ -120,7 +119,7 @@ const Account = () => {
           </div>
           <div className="account-buttons">
             <button id="cancel">Cancel</button>
-            <button id="save" onClick={()=>handleSubmit(form)}>Save Changes</button>
+            <button id="save" onClick={() => handleSubmit(form)}>Save Changes</button>
             {/* {isSuccess && <div> updated user</div>} */}
             {isError && <div> error</div>}
           </div>

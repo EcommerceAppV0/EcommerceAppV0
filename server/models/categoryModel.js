@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             required: true,
             unique: false
+        },
+        image: {
+            type: DataTypes.TEXT,
         }
     })
     return Category;

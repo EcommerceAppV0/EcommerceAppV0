@@ -10,7 +10,7 @@ const CardContainer = ({ ispromo, prod }) => {
         <div className='card-container'>
             <div className='card-images'>
                 <div className='promtion-div-wish'>
-                    <button style={{ visibility: !ispromo ? "hidden" : "block" }}>-{prod.promo}%</button>
+                    <button style={{ backgroundColor: prod.status === "new" ? "#0F6" : "#DB4444", visibility: prod.status === "new" || prod.status === "sale" ? "block" : "hidden" }}>{prod.status === "new" ? "New" : `-${prod.promo}%`}</button>
                     <i
                         onClick={() =>
                             // then Changed
@@ -28,7 +28,7 @@ const CardContainer = ({ ispromo, prod }) => {
                 <span>{prod.name}</span>
                 <div className='d-flex gap-3 money'>
                     <span style={{ color: "#DB4444" }} >${prod.price}</span>
-                    <span style={{ color: "#000", textDecorationLine: " line-through" }} >${(prod.price / (1 - prod.promo / 100)).toFixed(2)}</span>
+                    {prod.status === "sale" && < span style={{ color: "#000", textDecorationLine: " line-through" }} >${(prod.price / (1 - prod.promo / 100)).toFixed(2)}</span>}
                 </div>
                 <div className='d-flex gap-3'>
                     <div className='d-flex gap-2 align-items-center'>
@@ -38,7 +38,7 @@ const CardContainer = ({ ispromo, prod }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -1,7 +1,9 @@
 import React from 'react'
 import "./style.css"
+import  { useNavigate }  from 'react-router-dom';
 
 const Error = () => {
+    const navigate = useNavigate()
     return (
         <div className="error">
             <div className="roadmap-error">
@@ -19,7 +21,7 @@ const Error = () => {
             </div>
             <div className='third-error'>
                 <div className="button-error">
-                    <div className="view-all-products">Back to home page</div>
+                    <div className="view-all-products" onClick={()=>navigate("/home")}>Back to home page</div>
                 </div>
             </div>
         </div>

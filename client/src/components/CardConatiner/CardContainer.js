@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Cart1 from '../../assets/images/Cart1.png'
 import { setUser } from "../../slicers/userSlicer"
 import DelModal from './DelModal'
+import { toast } from "react-toastify"
 const CardContainer = ({ prod }) => {
     const { user } = useSelector((state) => state.value)
     const [click, setClicked] = useState(true)
@@ -17,8 +18,29 @@ const CardContainer = ({ prod }) => {
     const handeyeClick = async () => {
         try {
             if (!user.wishlist.some((product) => product.id === prod.id)) {
-                const res = await updateLists({ wishlist: [...user.wishlist, { ...prod, inWishList: true }], id: user.userId }, user.userId).unwrap()
+                const res = await updateLists({ wishlist: [...user.wishlist, { ...prod, inWishList: true }], id: user.userId }).unwrap()
                 dispatch(setUser({ ...user, wishlist: [...user.wishlist, { ...prod, inWishList: true }] }))
+                toast.success(`${prod.name.slice(0, 15)}... Added`, {
+                    position: "bottom-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            } else {
+                toast.warning(`${prod.name.slice(0, 15)}... Already There`, {
+                    position: "bottom-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
         } catch (error) {
             console.log(error);
@@ -34,6 +56,7 @@ const CardContainer = ({ prod }) => {
         }
     }
     return (
+
         <div className='card-container'>
             <div className='card-images'>
                 <div className='promtion-div-wish'>
@@ -49,7 +72,6 @@ const CardContainer = ({ prod }) => {
                                 className={click ? "fa-solid fa-trash" : "fa-solid fa-trash fa-shake"}></i>
                             <DelModal handeyeClickOfTrash={handeyeClickOfTrash} prod={prod} />
                         </>
-
                         :
                         <i
                             onClick={() => {
@@ -59,7 +81,8 @@ const CardContainer = ({ prod }) => {
                             }
                             }
                             className={click ? "fa-regular fa-heart fa-lg fa-beat-fade" : "fa-solid fa-heart fa-lg "} style={{ color: "#DB4444" }}>
-                        </i>}
+                        </i>
+                    }
                 </div>
                 {prod.inWishList && <div className='add-to-cart-button-card-container d-flex align-items-center justify-content-center gap-3'>
                     <i className="fa-solid fa-cart-shopping" style={{ color: "#fff" }}></i>

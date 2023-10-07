@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useUpdateInfoMutation } from "../../slicers/userApiSlice";
 import { setUser, setLoggedIn } from "../../slicers/userSlicer";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"
+
 
 const Account = () => {
   const { user } = useSelector((state) => state.value);
@@ -28,11 +30,40 @@ const Account = () => {
       if (res.message === "user updated") {
         dipsatch(setUser({ ...user, email: form.email, adress: form.adress, name: form.name, lastName: form.lastName }))
         dipsatch(setLoggedIn({ loggedIn: true, token: res.token }))
-        navigate('/home')
+        toast.success('User updated', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      } else {
+        toast.error('Verify Password', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       }
     }
     else {
-      console.log("password and confirm password do not match");
+      toast.warning(' Verify Confirm Password', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   }
 

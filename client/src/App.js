@@ -14,6 +14,8 @@ import Wishlist from "./components/WishList/WishList";
 import Account from "./components/Account/Account";
 import Cart from "./components/Cart/Cart";
 import HomePage from "./components/HomePage/HomePage";
+import { ToastContainer } from "react-toastify"
+
 import {
   useGetAllCategoriesMutation,
   useGetAllProductsMutation,
@@ -26,6 +28,8 @@ function App() {
   const dispatch = useDispatch();
   const [getAllProducts] = useGetAllProductsMutation();
   const [getAllCategories] = useGetAllCategoriesMutation();
+
+
 
   useEffect(() => {
     const initProd = async () => {
@@ -77,6 +81,9 @@ function App() {
         {/* <Route path=''/>
         <Route/> */}
       </Routes>
+      {/* tostas heree all okey  */}
+      <ToastContainer />
+
 
       {/* the footer will be the last compnetnts for all  */}
       <Footer />

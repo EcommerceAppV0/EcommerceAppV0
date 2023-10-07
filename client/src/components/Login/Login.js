@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { setLoggedIn, setUser } from "../../slicers/userSlicer"
+import { toast } from "react-toastify"
+
 const Login = () => {
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
@@ -25,8 +27,30 @@ const Login = () => {
             const { token, email, name, type, userId, cartlist, lastName, wishlist } = await login(body).unwrap()
             dispatch(setLoggedIn({ token, loggedIn: true }))
             dispatch(setUser({ email, name, type, userId, cartlist, lastName, wishlist }))
+            toast.success(`Welcome ${name}`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+
             navigate("/home")
         } catch (error) {
+            toast.error(error.data.message, {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+
             console.log(error);
         }
     }
@@ -79,7 +103,6 @@ const Login = () => {
                     }
 
                     {/* after we will add some Toasts for Ux Thank you  */}
-                    {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>
 

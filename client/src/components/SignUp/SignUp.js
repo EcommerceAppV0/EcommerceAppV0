@@ -5,6 +5,7 @@ import { useRegisterMutation } from '../../slicers/userApiSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setUser } from '../../slicers/userSlicer'
+import { toast } from 'react-toastify'
 const SignUp = () => {
     const [register, { isLoading }] = useRegisterMutation()
     const { user } = useSelector((state) => state.value)
@@ -32,13 +33,44 @@ const SignUp = () => {
 
     const handleSubmit = async (body) => {
         try {
-            const res = await register(body).unwrap()
-            console.log(res);
-            const { id, email, name, type } = res.result
-            dispatch(setUser({ id, email, name, type }))
-            navigate('/login')
+            if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i.test(form.password)) {
+                const res = await register(body).unwrap()
+                const { id, email, name, type } = res.result
+                dispatch(setUser({ id, email, name, type }))
+                toast.success('Login In Now', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+                navigate('/login')
+            } else {
+                toast.warning('Weak Password', {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            }
         } catch (error) {
-            console.log(error);
+            toast.error('Invalid Email ', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         }
 
     }
@@ -68,6 +100,9 @@ const SignUp = () => {
                             name='password'
                             type='password'
                             className='password' placeholder='Password' />
+                        <div className='d-flex align-items-start  passerror'>
+                            <span>Minimum eight characters, at least one</span>
+                            <span> letter and one number</span></div>
                     </div>
                     <div className='sub-form-container2'>
                         <button className='btn-add'
@@ -105,7 +140,6 @@ const SignUp = () => {
                             </div>
                         </div>
                         {/* here we will add some toast for loading */}
-                        {isLoading && <h1>waiting....</h1>}
                     </div>
                 </div>
             </div>

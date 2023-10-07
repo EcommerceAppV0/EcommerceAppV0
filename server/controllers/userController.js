@@ -72,7 +72,7 @@ module.exports.login = async (req, res) => {
         })
         .catch((error) => {
           res.status(400).send({
-            message: "Passwords does not matchhh",
+            message: "Passwords does not match",
             error,
           });
         });

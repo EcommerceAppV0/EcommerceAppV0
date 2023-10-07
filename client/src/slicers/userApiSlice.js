@@ -24,10 +24,10 @@ export const usersApiSlice = userApi.injectEndpoints({
             })
         }),
         updateLists: builder.mutation({
-            query: ({ wishlist, id }) => ({
+            query: ({ cartlist, wishlist, id }) => ({
                 url: `http://localhost:5000/api/updateLists/${id}`,
                 method: "PUT",
-                body: { wishlist }
+                body: wishlist ? { wishlist } : { cartlist }
             })
         }),
         getAllProducts: builder.mutation({

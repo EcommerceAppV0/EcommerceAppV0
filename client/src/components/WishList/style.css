@@ -1,5 +1,60 @@
+.all-wishList-container {
+  flex-direction: column;
+  margin: 5rem 10rem;
+  gap: 2rem;
+}
+
 .all-wishList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.wishlist-text {
+  color: #000;
+  text-align: center;
+
+  /* Title/20PX Regular */
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 130% */
+}
+
+
+
+
+
+.move-to-bag {
+  display: flex;
+  padding: 0.8rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  color: #000;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  background: #fff;
+  font-weight: 500;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+  transition: 0.4s;
+}
+
+.move-to-bag:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+
+}
+
+
+.red-small-div {
+  width: 1.25rem;
+  height: 2.5rem;
+  background-color: #DB4444;
 }

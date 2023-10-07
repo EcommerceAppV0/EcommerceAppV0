@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { setUser } from '../../slicers/userSlicer'
 import { toast } from 'react-toastify'
 const SignUp = () => {
+    const [hide, setHide] = useState(true)
+
     const [register, { isLoading }] = useRegisterMutation()
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
@@ -95,11 +97,20 @@ const SignUp = () => {
                             onChange={(e) => handleFom(e)}
                             name='email'
                             className='mail' placeholder='Email or Phone Number' />
-                        <input
-                            onChange={(e) => handleFom(e)}
-                            name='password'
-                            type='password'
-                            className='password' placeholder='Password' />
+                        <div className='d-flex' >
+                            <input
+                                onChange={(e) => handleFom(e)}
+                                name='password'
+                                type={hide ? 'password' : "text"}
+                                className='password' placeholder='Password' />
+                            <button className='show-password'>
+                                <span
+                                    onClick={() => setHide(!hide)}
+                                    style={{ transition: "0.4s" }}>{hide ? "Show" : "Hide"}</span>
+                            </button>
+                        </div>
+
+
                         <div className='d-flex align-items-start  passerror'>
                             <span>Minimum eight characters, at least one</span>
                             <span> letter and one number</span></div>

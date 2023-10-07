@@ -60,20 +60,16 @@
 
 
 .last-child {
-    width: 83%;
-    /* background-color: red; */
+    width: 100%;
     height: fit-content;
     display: flex;
-    gap: 3rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 0.5rem;
-    /* background-color: black; */
 
 }
 
 .last-child1 {
-    flex: 50%;
-    /* background-color: aqua; */
+    width: 30rem;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -85,20 +81,17 @@
 
 .last-child1 input {
     flex: 2;
-    /* border: none !important; */
     outline: none !important;
     height: 3rem;
     color: #000;
     border-radius: 0.25rem;
     border: 1px solid #000;
-
-    /* Title/16PX Regular */
+    padding-left: 1rem;
     font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem;
-    /* 150% */
 
 }
 
@@ -117,7 +110,8 @@
 }
 
 .last-child2 {
-    flex: 50%;
+    /* flex: 50%; */
+    width: 28rem;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -126,6 +120,8 @@
     font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
+    padding: 1rem;
+    border: 1px solid #000;
     font-weight: 400;
     line-height: 1.5rem;
 }

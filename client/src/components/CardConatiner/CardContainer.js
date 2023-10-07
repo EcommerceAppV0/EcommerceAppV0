@@ -55,6 +55,37 @@ const CardContainer = ({ prod }) => {
             console.log(error);
         }
     }
+    const handleClickAddToCart = async () => {
+        try {
+            if (!user.cartlist.some((product) => product.id === prod.id)) {
+                const res = await updateLists({ cartlist: [...user.cartlist, { ...prod }], id: user.userId }).unwrap()
+                dispatch(setUser({ ...user, cartlist: [...user.cartlist, { ...prod }] }))
+                toast.success(`${prod.name.slice(0, 15)}... Added`, {
+                    position: "bottom-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            } else {
+                toast.warning(`${prod.name.slice(0, 15)}... Already Added`, {
+                    position: "bottom-left",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
 
         <div className='card-container'>
@@ -84,15 +115,15 @@ const CardContainer = ({ prod }) => {
                         </i>
                     }
                 </div>
-                {prod.inWishList && <div className='add-to-cart-button-card-container d-flex align-items-center justify-content-center gap-3'>
+                {prod.inWishList && <div
+                // added to user.cartlist
+                    onClick={() => handleClickAddToCart()}
+                    className='add-to-cart-button-card-container d-flex align-items-center justify-content-center gap-3'>
                     <i className="fa-solid fa-cart-shopping" style={{ color: "#fff" }}></i>
                     <div>Add To Cart</div>
                 </div>}
                 {!prod.inWishList && <i className="fa-regular fa-eye fa-lg"
                     onClick={() => {
-
-
-
                     }}
                     style={{ color: "black" }}></i>}
 

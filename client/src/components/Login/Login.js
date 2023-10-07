@@ -12,6 +12,7 @@ import { toast } from "react-toastify"
 const Login = () => {
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
+    const [hide, setHide] = useState(true)
 
     const navigate = useNavigate()
     const [login, { isLoading, isError }] = useLoginMutation()
@@ -78,12 +79,19 @@ const Login = () => {
                             name='email'
                             className='mail'
                             placeholder='Email or Phone Number' />
-                        <input
-                            onChange={(e) => handleFom(e)}
-                            name='password'
-                            type='password'
-                            className='password'
-                            placeholder='Password' />
+                        <div className='d-flex' >
+                            <input
+                                onChange={(e) => handleFom(e)}
+                                name='password'
+                                type={hide ? 'password' : "text"}
+                                className='password'
+                                placeholder='Password' />
+                            <button className='show-password'>
+                                <span
+                                    onClick={() => setHide(!hide)}
+                                    style={{ transition: "0.4s" }}>{hide ? "Show" : "Hide"}</span>
+                            </button>
+                        </div>
                     </div>
                     <div className='login-sub-form-container2'>
                         <button className='login-btn'

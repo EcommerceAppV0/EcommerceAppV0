@@ -1,8 +1,12 @@
 import React from 'react'
 import "./style.css"
 import CardComponet from '../CardComponent/CardComponet'
+import { useSelector } from 'react-redux'
+
 
 const Cart = () => {
+    const { user } = useSelector((state) => state.value)
+
     return (
         <div className='cart-container'>
             <div className='sub1'>
@@ -18,17 +22,7 @@ const Cart = () => {
                     <span>Quantity</span>
                     <span>SubTotal</span>
                 </div>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
-                <CardComponet/>
+                {user.cartlist.map((card) => <CardComponet key={card.id} card={card} />)}
                 <div className='last-child'>
                     <div className='last-child1'>
                         <input

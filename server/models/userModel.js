@@ -4,12 +4,15 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             unique: true,
-            required: true
+            required: true,
+            validate: {
+                isEmail: true,
+            }
         },
         password: {
             type: DataTypes.STRING,
             required: true,
-            unique: false
+            unique: false,
         },
         name: {
             type: DataTypes.STRING,
@@ -28,11 +31,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.ENUM,
             values: ['admin', 'Client', 'seller']
         },
-        wishlist:{
+        wishlist: {
             type: DataTypes.JSON,
             defaultValue: []
         },
-        cartlist:{
+        cartlist: {
             type: DataTypes.JSON,
             defaultValue: []
         }

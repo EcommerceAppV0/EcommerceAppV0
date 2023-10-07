@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import "./style.css"
 import { useNavigate } from 'react-router-dom'
 import { useUpdateListsMutation } from '../../slicers/userApiSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import Cart1 from '../../assets/images/Cart1.png'
 import { setUser } from "../../slicers/userSlicer"
+import DelModal from './DelModal'
 const CardContainer = ({ prod }) => {
     const { user } = useSelector((state) => state.value)
     const [click, setClicked] = useState(true)
@@ -13,10 +16,19 @@ const CardContainer = ({ prod }) => {
     const greys = new Array(5 - rates.length).fill("rate")
     const handeyeClick = async () => {
         try {
-            if (!user.wishlist.includes(prod)) {
+            if (!user.wishlist.some((product) => product.id === prod.id)) {
                 const res = await updateLists({ wishlist: [...user.wishlist, { ...prod, inWishList: true }], id: user.userId }, user.userId).unwrap()
                 dispatch(setUser({ ...user, wishlist: [...user.wishlist, { ...prod, inWishList: true }] }))
             }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const handeyeClickOfTrash = async () => {
+        try {
+            const newlist = user.wishlist.filter((product) => product.id !== prod.id)
+            const res = await updateLists({ wishlist: [...newlist], id: user.userId }, user.userId).unwrap()
+            dispatch(setUser({ ...user, wishlist: [...newlist] }))
         } catch (error) {
             console.log(error);
         }
@@ -26,22 +38,40 @@ const CardContainer = ({ prod }) => {
             <div className='card-images'>
                 <div className='promtion-div-wish'>
                     <button style={{ backgroundColor: prod.status === "new" ? "#0F6" : "#DB4444", visibility: prod.status === "new" || prod.status === "sale" ? "block" : "hidden" }}>{prod.status === "new" ? "New" : `-${prod.promo}%`}</button>
-                    <i
-                        onClick={() => {
-                            //  toaost and
-                            setClicked(!click);
-                            handeyeClick()
-                        }
-                        }
-                        className={click ? "fa-regular fa-heart fa-lg" : "fa-solid fa-heart fa-lg"} style={{ color: "#DB4444" }}></i>
+                    {prod.inWishList ?
+                        <>
+                            <i
+                                data-bs-toggle="modal"
+                                data-bs-target={`#delModal${prod.id}`}
+                                onClick={() => {
+                                    setClicked(!click);
+                                }}
+                                className={click ? "fa-solid fa-trash" : "fa-solid fa-trash fa-shake"}></i>
+                            <DelModal handeyeClickOfTrash={handeyeClickOfTrash} prod={prod} />
+                        </>
+
+                        :
+                        <i
+                            onClick={() => {
+                                //  toaost and
+                                setClicked(!click);
+                                handeyeClick()
+                            }
+                            }
+                            className={click ? "fa-regular fa-heart fa-lg fa-beat-fade" : "fa-solid fa-heart fa-lg "} style={{ color: "#DB4444" }}>
+                        </i>}
                 </div>
-                <i className="fa-regular fa-eye fa-lg"
+                {prod.inWishList && <div className='add-to-cart-button-card-container d-flex align-items-center justify-content-center gap-3'>
+                    <i className="fa-solid fa-cart-shopping" style={{ color: "#fff" }}></i>
+                    <div>Add To Cart</div>
+                </div>}
+                {!prod.inWishList && <i className="fa-regular fa-eye fa-lg"
                     onClick={() => {
 
 
 
                     }}
-                    style={{ color: "black" }}></i>
+                    style={{ color: "black" }}></i>}
 
                 <img src={prod.images[0]} alt='product' />
             </div>

@@ -89,11 +89,11 @@ label{
     gap: 1.5rem;
 }
 .account-password input{
-    border-radius: 0.25rem;
-    border-color: white;
     background-color: rgba(128, 128, 128, 0.181);
     height: 2.75rem;
     border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
     padding: .9rem;
 }
 

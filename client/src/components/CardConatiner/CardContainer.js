@@ -3,7 +3,6 @@ import "./style.css"
 import { useNavigate } from 'react-router-dom'
 import { useUpdateListsMutation } from '../../slicers/userApiSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import Cart1 from '../../assets/images/Cart1.png'
 import { setUser } from "../../slicers/userSlicer"
 import DelModal from './DelModal'
 import { toast } from "react-toastify"

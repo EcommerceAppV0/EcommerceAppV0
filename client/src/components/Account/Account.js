@@ -8,6 +8,11 @@ import { toast } from "react-toastify"
 
 
 const Account = () => {
+  const [hide, setHide] = useState({
+    password: true,
+    newPassword: true,
+    confirmPassword: true,
+  })
   const { user } = useSelector((state) => state.value);
   const dipsatch = useDispatch()
   const navigate = useNavigate()
@@ -133,25 +138,59 @@ const Account = () => {
           </div>
           <div className="account-password">
             <label>Password Changes</label>
-            <input
-              type="password"
-              placeholder="Current Password"
-              onChange={(e) => setForm({ ...form, old: e.target.value })}
-            />
-            <input
-              type="password"
-              placeholder="New Password"
-              onChange={(e) =>
-                setForm({ ...form, newPassword: e.target.value })
-              }
-            />
-            <input
-              type="password"
-              placeholder="Confirm New Password"
-              onChange={(e) =>
-                setForm({ ...form, confirmPassword: e.target.value })
-              }
-            />
+            <div className='d-flex' >
+
+              <input
+                className="w-100"
+                type={hide.password ? "password" : "text"}
+
+                placeholder="Current Password"
+                onChange={(e) => setForm({ ...form, old: e.target.value })}
+              />
+              <button
+                onClick={() => setHide({ ...hide, password: !hide.password })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.password ? "Show" : "Hide"}</span>
+              </button>
+            </div>
+            <div className='d-flex' >
+
+              <input
+                className="w-100"
+                type={hide.newPassword ? "password" : "text"}
+                placeholder="New Password"
+                onChange={(e) =>
+                  setForm({ ...form, newPassword: e.target.value })
+                }
+              />
+              <button
+                onClick={() => setHide({ ...hide, newPassword: !hide.newPassword })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.newPassword ? "Show" : "Hide"}</span>
+              </button>
+
+            </div>
+            <div className='d-flex' >
+              <input
+
+                className="w-100"
+                type={hide.confirmPassword ? "password" : "text"}
+                placeholder="Confirm New Password"
+                onChange={(e) =>
+                  setForm({ ...form, confirmPassword: e.target.value })
+                }
+              />
+              <button
+                onClick={() => setHide({ ...hide, confirmPassword: !hide.confirmPassword })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.confirmPassword ? "Show" : "Hide"}</span>
+              </button>
+
+            </div>
+
           </div>
           <div className="account-buttons">
             <button id="cancel">Cancel</button>

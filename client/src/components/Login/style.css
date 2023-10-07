@@ -95,6 +95,21 @@
 }
 
 
+.show-password {
+    padding: 0rem 1rem;
+    font-size: 0.7rem;
+    font-family: Poppins;
+    border: none;
+    color: blue ;
+    opacity: 0.8;
+    background: none ;
+    border-bottom: 1px solid black;
+}
+.show-password:hover span{
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
 
 .login-sub-form-container2 {
     width: 100%;

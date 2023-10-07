@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use('/api/', userRouter);
 // secured Routers
-app.use("/api/products", auth, productRouter);
+app.use("/api/products",  productRouter);
 // i just secured the router of the products for now 
 app.use("/api/categories", categoryRouter);
 

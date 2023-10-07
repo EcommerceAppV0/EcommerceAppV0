@@ -23,15 +23,27 @@ export const usersApiSlice = userApi.injectEndpoints({
                 body: data
             })
         }),
-        updateLists : builder.mutation({
-            query: (data , id) => ({
+        updateLists: builder.mutation({
+            query: ({ cartlist, wishlist, id }) => ({
                 url: `http://localhost:5000/api/updateLists/${id}`,
                 method: "PUT",
-                body: data
+                body: wishlist ? { wishlist } : { cartlist }
+            })
+        }),
+        getAllProducts: builder.mutation({
+            query: (data) => ({
+                url: "http://localhost:5000/api/products/getAll",
+                method: "GET",
+            })
+        }),
+        getAllCategories: builder.mutation({
+            query: (data) => ({
+                url: "http://localhost:5000/api/categories/getAll",
+                method: "GET"
             })
         })
     }),
 })
 
 
-export const { useRegisterMutation, useLoginMutation , useUpdateInfoMutation , useUpdateListsMutation } = usersApiSlice 
+export const { useRegisterMutation, useLoginMutation, useUpdateInfoMutation, useUpdateListsMutation, useGetAllProductsMutation, useGetAllCategoriesMutation } = usersApiSlice 

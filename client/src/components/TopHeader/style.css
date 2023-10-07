@@ -14,7 +14,7 @@
 
 .frame {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   font-family: Poppins;
   font-size: 0.875rem;

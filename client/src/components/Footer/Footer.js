@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 export const Footer = () => {
   const navigate = useNavigate();
-  const {loggedIn} = useSelector((state)=>state.value)
+  const { loggedIn } = useSelector((state) => state.value)
   // console.log(loggedIn);
 
   return (
@@ -36,7 +36,7 @@ export const Footer = () => {
             </p>
             <div className="email-sender">
               <input placeholder="Enter your email" />
-              <img src={vector} />
+              <img src={vector} alt="email" />
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export const Footer = () => {
           <div className="frame-4">
             <div
               className="text-wrapper-3"
-              onClick={() => loggedIn ?  navigate("/account") : navigate("/error")}
+              onClick={() => loggedIn ? navigate("/account") : navigate("/error")}
             >
               My Account
             </div>
@@ -63,16 +63,16 @@ export const Footer = () => {
               <p onClick={() => navigate("/login")}>Login</p> /{" "}
               <p onClick={() => navigate("/signup")}> Register</p>
             </div>
-            <div className="text-wrapper-3" onClick={() =>loggedIn ?  navigate("/cart") : navigate("/error") }>
+            <div className="text-wrapper-3" onClick={() => loggedIn ? navigate("/cart") : navigate("/error")}>
               Cart
             </div>
             <div
               className="text-wrapper-3"
-              onClick={() => {loggedIn ? navigate("/wishlist"): navigate("/error")}}
+              onClick={() => { loggedIn ? navigate("/wishlist") : navigate("/error") }}
             >
               Wishlist
             </div>
-            <div className="text-wrapper-3" onClick={() =>loggedIn ?  navigate("/home") : navigate("/error")}>
+            <div className="text-wrapper-3" onClick={() => loggedIn ? navigate("/home") : navigate("/error")}>
               Shop
             </div>
           </div>

@@ -7,9 +7,12 @@ import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../slicers/userApiSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { setLoggedIn, setUser } from "../../slicers/userSlicer"
+import { toast } from "react-toastify"
+
 const Login = () => {
     const { user } = useSelector((state) => state.value)
     const dispatch = useDispatch()
+    const [hide, setHide] = useState(true)
 
     const navigate = useNavigate()
     const [login, { isLoading, isError }] = useLoginMutation()
@@ -25,8 +28,30 @@ const Login = () => {
             const { token, email, name, type, userId, cartlist, lastName, wishlist } = await login(body).unwrap()
             dispatch(setLoggedIn({ token, loggedIn: true }))
             dispatch(setUser({ email, name, type, userId, cartlist, lastName, wishlist }))
+            toast.success(`Welcome ${name}`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+
             navigate("/home")
         } catch (error) {
+            toast.error(error.data.message, {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+
             console.log(error);
         }
     }
@@ -54,12 +79,19 @@ const Login = () => {
                             name='email'
                             className='mail'
                             placeholder='Email or Phone Number' />
-                        <input
-                            onChange={(e) => handleFom(e)}
-                            name='password'
-                            type='password'
-                            className='password'
-                            placeholder='Password' />
+                        <div className='d-flex' >
+                            <input
+                                onChange={(e) => handleFom(e)}
+                                name='password'
+                                type={hide ? 'password' : "text"}
+                                className='password'
+                                placeholder='Password' />
+                            <button className='show-password'>
+                                <span
+                                    onClick={() => setHide(!hide)}
+                                    style={{ transition: "0.4s" }}>{hide ? "Show" : "Hide"}</span>
+                            </button>
+                        </div>
                     </div>
                     <div className='login-sub-form-container2'>
                         <button className='login-btn'
@@ -79,7 +111,6 @@ const Login = () => {
                     }
 
                     {/* after we will add some Toasts for Ux Thank you  */}
-                    {isError && <h1>❌❌❌ </h1>}
                 </div>
             </div>
 

@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import "./style.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useUpdateInfoMutation } from "../../slicers/userApiSlice";
+import { setUser, setLoggedIn } from "../../slicers/userSlicer";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"
+
 
 const Account = () => {
+  const [hide, setHide] = useState({
+    password: true,
+    newPassword: true,
+    confirmPassword: true,
+  })
   const { user } = useSelector((state) => state.value);
+  const dipsatch = useDispatch()
+  const navigate = useNavigate()
   const [updateInfo, { isLoading, isSuccess, isError }] = useUpdateInfoMutation()
   const [form, setForm] = useState({
     name: "",
@@ -21,10 +32,43 @@ const Account = () => {
   const handleSubmit = async (form) => {
     if (form.newPassword === form.confirmPassword) {
       const res = await updateInfo(form).unwrap()
-      console.log(res);
+      if (res.message === "user updated") {
+        dipsatch(setUser({ ...user, email: form.email, adress: form.adress, name: form.name, lastName: form.lastName }))
+        dipsatch(setLoggedIn({ loggedIn: true, token: res.token }))
+        toast.success('User updated', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      } else {
+        toast.error('Verify Password', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     }
     else {
-      console.log("password and confirm password do not match");
+      toast.warning(' Verify Confirm Password', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   }
 
@@ -37,10 +81,7 @@ const Account = () => {
         <h6 id="welcome">
           Welcome{"  "}
           <p>
-            username
-            {
-              //! username
-            }
+            {user.name}
           </p>
         </h6>
       </div>
@@ -97,25 +138,59 @@ const Account = () => {
           </div>
           <div className="account-password">
             <label>Password Changes</label>
-            <input
-              type="password"
-              placeholder="Current Password"
-              onChange={(e) => setForm({ ...form, old: e.target.value })}
-            />
-            <input
-              type="password"
-              placeholder="New Password"
-              onChange={(e) =>
-                setForm({ ...form, newPassword: e.target.value })
-              }
-            />
-            <input
-              type="password"
-              placeholder="Confirm New Password"
-              onChange={(e) =>
-                setForm({ ...form, confirmPassword: e.target.value })
-              }
-            />
+            <div className='d-flex' >
+
+              <input
+                className="w-100"
+                type={hide.password ? "password" : "text"}
+
+                placeholder="Current Password"
+                onChange={(e) => setForm({ ...form, old: e.target.value })}
+              />
+              <button
+                onClick={() => setHide({ ...hide, password: !hide.password })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.password ? "Show" : "Hide"}</span>
+              </button>
+            </div>
+            <div className='d-flex' >
+
+              <input
+                className="w-100"
+                type={hide.newPassword ? "password" : "text"}
+                placeholder="New Password"
+                onChange={(e) =>
+                  setForm({ ...form, newPassword: e.target.value })
+                }
+              />
+              <button
+                onClick={() => setHide({ ...hide, newPassword: !hide.newPassword })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.newPassword ? "Show" : "Hide"}</span>
+              </button>
+
+            </div>
+            <div className='d-flex' >
+              <input
+
+                className="w-100"
+                type={hide.confirmPassword ? "password" : "text"}
+                placeholder="Confirm New Password"
+                onChange={(e) =>
+                  setForm({ ...form, confirmPassword: e.target.value })
+                }
+              />
+              <button
+                onClick={() => setHide({ ...hide, confirmPassword: !hide.confirmPassword })}
+                className='show-password' style={{ background: "rgba(128, 128, 128, 0.23)" }}>
+                <span
+                  style={{ transition: "0.4s" }}>{hide.confirmPassword ? "Show" : "Hide"}</span>
+              </button>
+
+            </div>
+
           </div>
           <div className="account-buttons">
             <button id="cancel">Cancel</button>

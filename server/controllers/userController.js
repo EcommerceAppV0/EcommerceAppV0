@@ -72,7 +72,7 @@ module.exports.login = async (req, res) => {
         })
         .catch((error) => {
           res.status(400).send({
-            message: "Passwords does not matchhh",
+            message: "Passwords does not match",
             error,
           });
         });
@@ -109,7 +109,7 @@ module.exports.updateLists = async (req, res) => {
     });
     res.json(update);
   } catch (error) {
-    throw error;
+    res.status(404).json(error);
   }
 };
 
@@ -129,7 +129,15 @@ module.exports.updateUserInfo = async (req, res) => {
                 { where: { id: currentId } }
               )
                 .then((response) => {
-                  res.json({ message: "user updated", response })
+                  const token = jwt.sign(
+                    {
+                      userId: currentId,
+                      email: email,
+                    },
+                    process.env.SECRET_KEY,
+                    { expiresIn: "24h" }
+                  );
+                  res.json({ message: "user updated", response, token })
                 })
                 .catch((error) =>
                   res.json({ message: "user is not updated", error })

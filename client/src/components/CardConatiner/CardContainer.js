@@ -15,7 +15,7 @@ const CardContainer = ({ prod }) => {
         try {
             if (!user.wishlist.includes(prod)) {
                 const res = await updateLists({ wishlist: [...user.wishlist, { ...prod, inWishList: true }], id: user.userId }, user.userId).unwrap()
-                dispatch(setUser({ ...user, wishlist: [...user.wishlist, prod] }))
+                dispatch(setUser({ ...user, wishlist: [...user.wishlist, { ...prod, inWishList: true }] }))
             }
         } catch (error) {
             console.log(error);

@@ -41,9 +41,23 @@ export const usersApiSlice = userApi.injectEndpoints({
                 url: "http://localhost:5000/api/categories/getAll",
                 method: "GET"
             })
+        }),
+        getOneCategory: builder.mutation({
+            query: (id) => ({
+                url: `http://localhost:5000/api/categories/${id}`,
+                method: "GET"
+            })
         })
     }),
 })
 
 
-export const { useRegisterMutation, useLoginMutation, useUpdateInfoMutation, useUpdateListsMutation, useGetAllProductsMutation, useGetAllCategoriesMutation } = usersApiSlice 
+export const {
+    useRegisterMutation,
+    useLoginMutation,
+    useUpdateInfoMutation,
+    useUpdateListsMutation,
+    useGetAllProductsMutation,
+    useGetAllCategoriesMutation,
+    useGetOneCategoryMutation
+} = usersApiSlice 

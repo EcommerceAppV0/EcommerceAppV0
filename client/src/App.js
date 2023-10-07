@@ -22,6 +22,7 @@ import {
 } from "./slicers/userApiSlice";
 import { useDispatch } from "react-redux";
 import { setProducts, setCategories } from "./slicers/productSlicer";
+import CategoriesPage from "./components/CategoriesPage/CategoriesPage";
 
 function App() {
   const { user, loggedIn } = useSelector((state) => state.value);
@@ -72,6 +73,7 @@ function App() {
         <Route path="/error" element={<Error />} />
         <Route path="/about" element={<About />} />
         <Route path="/productdetails" element={<ProductsDetails />} />
+        <Route path="/categories" element={<CategoriesPage />} />
         {/* <Route/>  */}
         <Route path="/account" element={<Account />} />
         <Route path="/*" element={<Error />} />

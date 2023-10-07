@@ -16,7 +16,7 @@ module.exports = {
     },
     getOne: async (req, res) => {
         try {
-            const category = await Category.findAll({ include: { all: true, nested: true }, where: { id: req.params.id } });
+            const category = await Category.findOne({ include: { all: true, nested: true }, where: { id: req.params.id } });
             res.json(category);
         } catch (error) {
             res.status(404).send(error);

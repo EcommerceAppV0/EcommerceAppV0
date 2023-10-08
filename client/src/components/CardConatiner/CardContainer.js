@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setUser } from "../../slicers/userSlicer"
 import DelModal from './DelModal'
 import { toast } from "react-toastify"
-const CardContainer = ({ prod }) => {
+const CardContainer = ({ prod }) => { 
+    // console.log(prod.inWishList);
     const { user } = useSelector((state) => state.value)
     const [click, setClicked] = useState(true)
     const navigate = useNavigate()
@@ -123,6 +124,7 @@ const CardContainer = ({ prod }) => {
                 </div>}
                 {!prod.inWishList && <i className="fa-regular fa-eye fa-lg"
                     onClick={() => {
+                        navigate("/productdetails")
                     }}
                     style={{ color: "black" }}></i>}
 

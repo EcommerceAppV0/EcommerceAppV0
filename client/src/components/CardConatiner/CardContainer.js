@@ -168,6 +168,7 @@ const CardContainer = ({ prod }) => {
             onClick={() => {
               dispatch(setProductDetails(prod));
               navigate("/productdetails");
+              window.scrollTo(0, 200)
             }}
             style={{ color: "black" }}
           ></i>

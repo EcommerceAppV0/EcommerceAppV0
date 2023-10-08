@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import pc from "../../assets/images/pc.png"
+import DelModal from '../CardConatiner/DelModal'
 import "./style.css"
-const CardComponet = ({ card }) => {
+const CardComponet = ({ card, removeItem }) => {
     const [quantity, setQuantity] = useState(card.quantity)
     return (
         <div className='cart-element'>
@@ -17,6 +17,10 @@ const CardComponet = ({ card }) => {
                     min={0} max={30} type='number' placeholder='0' defaultValue={quantity} />
             </div>
             <span>${card.price * quantity}</span>
+            <i className="gg-close-o" data-bs-toggle="modal"
+                data-bs-target={`#delModal${card.id}`}></i>
+
+            <DelModal prod={card} removeItem={removeItem} />
         </div>
     )
 }

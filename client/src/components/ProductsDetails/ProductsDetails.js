@@ -79,7 +79,7 @@ const ProductsDetails = () => {
 
   return (
     <div className="product-details">
-      <div className="product-path">Account / prod name</div>
+      <div className="product-path">Account / {productDetails.name}</div>
       <div className="main-product-details">
         <div className="product-images">
           {fourImages.map((img, i) => (

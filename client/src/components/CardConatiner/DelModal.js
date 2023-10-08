@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DelModal = ({ prod, handeyeClickOfTrash }) => {
+const DelModal = ({ prod, handeyeClickOfTrash, removeItem }) => {
     return (
         <div className="modal fade" id={`delModal${prod.id}`} tabindex="-1" aria-labelledby={`delModal${prod.id}Label`} aria-hidden="true">
             <div className="modal-dialog">
@@ -16,7 +16,7 @@ const DelModal = ({ prod, handeyeClickOfTrash }) => {
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
                             onClick={() => {
-                                handeyeClickOfTrash()
+                                removeItem ? removeItem(prod.id) : handeyeClickOfTrash()
                             }}
                         >Save changes</button>
                     </div>

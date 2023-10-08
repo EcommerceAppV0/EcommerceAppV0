@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useUpdateListsMutation } from '../../slicers/userApiSlice'
 import { setUser } from '../../slicers/userSlicer'
+import { toast } from 'react-toastify'
 
 
 const Cart = () => {
@@ -14,8 +15,22 @@ const Cart = () => {
     const [updateLists] = useUpdateListsMutation()
 
     const removeItem = async (id) => {
-        const res = await updateLists({ cartlist: [...user.cartlist.filter(item => item!=id)], id: user.userId }).unwrap()
-        dispatch(setUser({ ...user, cartlist: [...user.cartlist.filter(item => item!=id)] }))
+        try {
+            const res = await updateLists({ cartlist: [...user.cartlist.filter(item => item.id != id)], id: user.userId }).unwrap()
+            dispatch(setUser({ ...user, cartlist: [...user.cartlist.filter(item => item.id != id)] }))
+            toast.success(`Item Is Removed`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -28,7 +43,7 @@ const Cart = () => {
                 <span className='home-sub2'>Cart</span>
             </div>
             <div className='sub2'>
-                {!user.cartlist.length ?
+                {!user.cartlist?.length ?
                     <h1>No Items In The Cart Go Shop  </h1>
                     :
                     <>
@@ -38,7 +53,7 @@ const Cart = () => {
                             <span>Quantity</span>
                             <span>SubTotal</span>
                         </div>
-                        {user.cartlist.map((card) => <CardComponet key={card.id} card={card} removeItem={removeItem}/>)}
+                        {user.cartlist.map((card) => <CardComponet key={card.id} card={card} removeItem={removeItem} />)}
                     </>
                 }
                 <div className='last-child'>

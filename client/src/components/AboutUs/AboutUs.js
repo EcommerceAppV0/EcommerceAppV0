@@ -1,8 +1,5 @@
-//matmesouch bsh nkamlha : hakim
-//fixed from Mpk
 import "./style.css";
 import image from "../../assets/images/2girls.png";
-import home from "../../assets/images/home-image.png";
 import container1 from "../../assets/images/Frame 701.png";
 import services from "../../assets/images/services-icon.png";
 import dollar from "../../assets/images/Icon-Sale.png";
@@ -107,10 +104,10 @@ const About = () => {
         </div>
       </div>
       <div className="slider">
-          <img src={slider} alt="" />
-        </div>
+        <img src={slider} alt="" />
+      </div>
       <div className="last-div">
-    <img src={lastFrame} alt="" />
+        <img src={lastFrame} alt="" />
       </div>
     </div>
   );

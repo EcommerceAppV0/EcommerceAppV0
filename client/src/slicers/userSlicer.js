@@ -26,8 +26,6 @@ export const userSlicer = createSlice({
             localStorage.removeItem('userInfo')
             localStorage.removeItem('userToken')
         },
-
-
     }
 })
 
